@@ -32,6 +32,34 @@
   </script>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <style>
+    .hero-slider { position: relative; overflow: hidden; border-radius: 2px; }
+    .hero-slider-track { display: flex; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .hero-slider-track > * { min-width: 100%; }
+    .hero-arrow {
+      position: absolute; top: 50%; z-index: 10;
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      background: rgba(11,18,32,0.45); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 50%; cursor: pointer;
+      color: rgba(242,237,232,0.8);
+      transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+      transform: translateY(-50%);
+    }
+    .hero-arrow:hover { background: rgba(0,119,204,0.55); color: #fff; box-shadow: 0 2px 16px rgba(0,119,204,0.25); }
+    .hero-arrow:active { transform: translateY(-50%) scale(0.93); }
+    .hero-arrow--prev { left: 12px; }
+    .hero-arrow--next { right: 12px; }
+    .hero-arrow svg { width: 18px; height: 18px; stroke-width: 2; }
+    .hero-counter {
+      position: absolute; bottom: 12px; right: 14px; z-index: 10;
+      font-size: 11px; letter-spacing: 0.06em; font-weight: 300;
+      color: rgba(242,237,232,0.7); background: rgba(11,18,32,0.45);
+      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.06); border-radius: 20px;
+      padding: 4px 12px; font-variant-numeric: tabular-nums;
+    }
+  </style>
 </head>
 <body class="bg-dark-base text-txt-dark font-sans antialiased">
 
@@ -69,10 +97,57 @@
           <li class="text-txt-dark-2/80">Finnyacht FINM Cleaper 35</li>
         </ol>
       </nav>
-      <!-- Main Image -->
-      <a href="/assets/finnyacht-35-1.jpg" class="glightbox block aspect-[16/9] overflow-hidden rounded-sm">
-        <img src="/assets/finnyacht-35-1.jpg" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" style="transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </a>
+      <!-- Main Image Slider -->
+      <div class="hero-slider aspect-[16/9]">
+        <div class="hero-slider-track" style="height:100%;">
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_000503_64042838-41b9-4025-be99-57b6e6001e34.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_000503_64042838-41b9-4025-be99-57b6e6001e34.jpeg" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_001057_8f9605c8-b38a-4244-8e32-1f1d6a25a084.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_001057_8f9605c8-b38a-4244-8e32-1f1d6a25a084.jpeg" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_002226_63efba28-92b8-4446-b975-080889035f7d.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_002226_63efba28-92b8-4446-b975-080889035f7d.png" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_002623_b19e639e-a4d9-403f-8139-3c33a35872d5.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_002623_b19e639e-a4d9-403f-8139-3c33a35872d5.png" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_003035_9495b51a-a420-4560-91b7-4915b402b1f2.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_003035_9495b51a-a420-4560-91b7-4915b402b1f2.png" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_003407_e7775876-f385-4999-9e10-a6e02d112974.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_003407_e7775876-f385-4999-9e10-a6e02d112974.jpeg" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_010335_2c5f4568-ede9-4693-8c16-a2fe1e6b44ff.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_010335_2c5f4568-ede9-4693-8c16-a2fe1e6b44ff.jpeg" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_010402_1fd01a83-7394-4abf-9939-5ad194eaab9f.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_010402_1fd01a83-7394-4abf-9939-5ad194eaab9f.jpeg" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_011352_b59e7a95-7c82-4b4e-a223-a03e96eea3f0.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_011352_b59e7a95-7c82-4b4e-a223-a03e96eea3f0.jpeg" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_011428_d4176f8a-a813-4c43-bfe2-cb5bdd65b512.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_011428_d4176f8a-a813-4c43-bfe2-cb5bdd65b512.jpeg" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_012453_c0f0589f-9867-41cf-9e38-968daefde199.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_012453_c0f0589f-9867-41cf-9e38-968daefde199.png" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_013414_de699fb1-148b-4b31-9fff-53cc1b3fc624.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_013414_de699fb1-148b-4b31-9fff-53cc1b3fc624.png" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_013933_22ceee01-5430-4b79-b3c8-3cd7ac544867.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_013933_22ceee01-5430-4b79-b3c8-3cd7ac544867.png" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_024534_f39c2e12-d76c-488a-a368-933f0bbba243.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_024534_f39c2e12-d76c-488a-a368-933f0bbba243.jpeg" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy"></a>
+        </div>
+        <button class="hero-arrow hero-arrow--prev" aria-label="Previous"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+        <button class="hero-arrow hero-arrow--next" aria-label="Next"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+        <span class="hero-counter">1 / 14</span>
+      </div>
+      <!-- Thumbnail Gallery -->
+      <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2 mt-4">
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_001057_8f9605c8-b38a-4244-8e32-1f1d6a25a084.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_001057_8f9605c8-b38a-4244-8e32-1f1d6a25a084.jpeg" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_002226_63efba28-92b8-4446-b975-080889035f7d.png" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_002226_63efba28-92b8-4446-b975-080889035f7d.png" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_002623_b19e639e-a4d9-403f-8139-3c33a35872d5.png" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_002623_b19e639e-a4d9-403f-8139-3c33a35872d5.png" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_003035_9495b51a-a420-4560-91b7-4915b402b1f2.png" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_003035_9495b51a-a420-4560-91b7-4915b402b1f2.png" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_003407_e7775876-f385-4999-9e10-a6e02d112974.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_003407_e7775876-f385-4999-9e10-a6e02d112974.jpeg" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_010335_2c5f4568-ede9-4693-8c16-a2fe1e6b44ff.jpeg" class="glightbox relative block aspect-square overflow-hidden rounded-sm group" data-gallery="boat">
+          <img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_010335_2c5f4568-ede9-4693-8c16-a2fe1e6b44ff.jpeg" alt="Finnyacht FINM Cleaper 35" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <span class="absolute inset-0 bg-dark-base/70 flex items-center justify-center text-txt-dark font-serif text-lg">+7</span>
+        </a>
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_010402_1fd01a83-7394-4abf-9939-5ad194eaab9f.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_011352_b59e7a95-7c82-4b4e-a223-a03e96eea3f0.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_011428_d4176f8a-a813-4c43-bfe2-cb5bdd65b512.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_012453_c0f0589f-9867-41cf-9e38-968daefde199.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_013414_de699fb1-148b-4b31-9fff-53cc1b3fc624.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_013933_22ceee01-5430-4b79-b3c8-3cd7ac544867.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_024534_f39c2e12-d76c-488a-a368-933f0bbba243.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+      </div>
     </div>
   </section>
 
@@ -83,7 +158,6 @@
       <!-- Left: Details -->
       <div class="lg:col-span-3">
         <div class="flex flex-wrap items-center gap-3 mb-4">
-          <span class="badge badge-stock">En stock</span> <span class="badge badge-price-drop">Precio rebajado</span>
           <span class="text-[11px] font-light uppercase tracking-[0.2em] text-txt-dark-2/60">Finnyacht · Vela · El Masnou</span>
         </div>
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-txt-dark tracking-[-0.03em] leading-[1.1] font-light">Finnyacht FINM Cleaper 35</h1>
@@ -153,7 +227,7 @@
       <h2 class="font-serif text-2xl text-txt-dark tracking-[-0.03em] mb-8">Embarcaciones similares</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <a href="/es/barcos/ketch-nordic-36-classic-1981/" class="boat-card" aria-label="Ver Ketch Nordic 36 Classic">
-      <div class="boat-card-image"><img src="/assets/ketch-nordic-36-1.jpg" alt="Ketch Nordic 36 Classic" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045336_92a17267-5552-41ab-aa7a-a1b71e12cf74.png" alt="Ketch Nordic 36 Classic" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Ketch · 1981</span>
@@ -164,7 +238,7 @@
       </div>
     </a>
 <a href="/es/barcos/hanse-470-2007/" class="boat-card" aria-label="Ver Hanse 470">
-      <div class="boat-card-image"><img src="/assets/hanse-470-1.jpg" alt="Hanse 470" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/hanse-470/a.jpeg" alt="Hanse 470" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Hanse · 2007</span>
@@ -175,7 +249,7 @@
       </div>
     </a>
 <a href="/es/barcos/fjord-900-1990/" class="boat-card" aria-label="Ver Fjord 900">
-      <div class="boat-card-image"><img src="/assets/fjord-900-1.jpg" alt="Fjord 900" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/fjord-900/hf_20260321_054728_e2717c99-daec-4cf0-95b7-759fea3ae8cf.jpeg" alt="Fjord 900" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Fjord · 1990</span>
@@ -257,5 +331,26 @@
   <script>GLightbox({ selector: '.glightbox' });</script>
   <script src="/shared.js"></script>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.hero-slider-track');
+    if (!track) return;
+    const slides = track.children;
+    const total = slides.length;
+    const counter = document.querySelector('.hero-counter');
+    let idx = 0;
+    function go(i) {
+      idx = (i + total) % total;
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      if (counter) counter.textContent = (idx + 1) + ' / ' + total;
+    }
+    document.querySelector('.hero-arrow--prev')?.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); go(idx - 1); });
+    document.querySelector('.hero-arrow--next')?.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); go(idx + 1); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') go(idx - 1);
+      if (e.key === 'ArrowRight') go(idx + 1);
+    });
+  });
+  </script>
 </body>
 </html>

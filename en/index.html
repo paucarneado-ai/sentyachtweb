@@ -394,11 +394,6 @@
       if (!grid) return;
       const featured = sortBoats(boats, 'price', 'desc').slice(0, 6);
       featured.forEach((boat, i) => {
-        const badgeHTML = boat.badges.map(b => {
-          const labels = { stock: 'In Stock', new: 'New', 'price-drop': 'Price Drop' };
-          const classes = { stock: 'badge-stock', new: 'badge-new', 'price-drop': 'badge-price-drop' };
-          return `<span class="badge ${classes[b]}">${labels[b]}</span>`;
-        }).join('');
         const card = document.createElement('a');
         card.href = `/en/boats/${boat.slug}/`;
         card.className = 'boat-card reveal';
@@ -407,7 +402,6 @@
         card.innerHTML = `
           <div class="boat-card-image">
             <img src="/assets/${boat.images[0]}" alt="${boat.name} - ${boat.year} - ${boat.location}" loading="lazy">
-            ${badgeHTML ? `<div class="absolute top-3 left-3 flex gap-2">${badgeHTML}</div>` : ''}
           </div>
           <div class="p-5">
             <div class="flex items-baseline justify-between mb-3">

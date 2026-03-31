@@ -32,6 +32,34 @@
   </script>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <style>
+    .hero-slider { position: relative; overflow: hidden; border-radius: 2px; }
+    .hero-slider-track { display: flex; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .hero-slider-track > * { min-width: 100%; }
+    .hero-arrow {
+      position: absolute; top: 50%; z-index: 10;
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      background: rgba(11,18,32,0.45); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 50%; cursor: pointer;
+      color: rgba(242,237,232,0.8);
+      transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+      transform: translateY(-50%);
+    }
+    .hero-arrow:hover { background: rgba(0,119,204,0.55); color: #fff; box-shadow: 0 2px 16px rgba(0,119,204,0.25); }
+    .hero-arrow:active { transform: translateY(-50%) scale(0.93); }
+    .hero-arrow--prev { left: 12px; }
+    .hero-arrow--next { right: 12px; }
+    .hero-arrow svg { width: 18px; height: 18px; stroke-width: 2; }
+    .hero-counter {
+      position: absolute; bottom: 12px; right: 14px; z-index: 10;
+      font-size: 11px; letter-spacing: 0.06em; font-weight: 300;
+      color: rgba(242,237,232,0.7); background: rgba(11,18,32,0.45);
+      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.06); border-radius: 20px;
+      padding: 4px 12px; font-variant-numeric: tabular-nums;
+    }
+  </style>
 </head>
 <body class="bg-dark-base text-txt-dark font-sans antialiased">
 
@@ -69,10 +97,77 @@
           <li class="text-txt-dark-2/80">Hanse 470</li>
         </ol>
       </nav>
-      <!-- Main Image -->
-      <a href="/assets/hanse-470-1.jpg" class="glightbox block aspect-[16/9] overflow-hidden rounded-sm">
-        <img src="/assets/hanse-470-1.jpg" alt="Hanse 470" class="w-full h-full object-cover" style="transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </a>
+      <!-- Main Image Slider -->
+      <div class="hero-slider aspect-[16/9]">
+        <div class="hero-slider-track" style="height:100%;">
+          <a href="/assets/imagenes web/hanse-470/a.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/a.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260322_074429_999836f6-29c8-4f55-94d3-c1e88aea7c40.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260322_074429_999836f6-29c8-4f55-94d3-c1e88aea7c40.png" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260322_075028_203fa6d8-dddd-464b-8b08-36cc31b84610.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260322_075028_203fa6d8-dddd-464b-8b08-36cc31b84610.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260322_082819_e08ab6c5-23ac-4a1f-84a9-75d61071f68d.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260322_082819_e08ab6c5-23ac-4a1f-84a9-75d61071f68d.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260322_083342_ff16d777-b624-4869-bfde-0458b3af4163.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260322_083342_ff16d777-b624-4869-bfde-0458b3af4163.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260322_083551_cf7d2883-9e32-4ecb-a2d6-496525badc8a.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260322_083551_cf7d2883-9e32-4ecb-a2d6-496525badc8a.png" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260322_084151_c20629aa-81f3-4219-b753-28f91e164ff8.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260322_084151_c20629aa-81f3-4219-b753-28f91e164ff8.png" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260322_084635_b32e4b59-6201-47d3-9b25-96ba0a0606b2.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260322_084635_b32e4b59-6201-47d3-9b25-96ba0a0606b2.png" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260322_085700_60bcea76-5bff-43dc-8140-94b6e9174510.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260322_085700_60bcea76-5bff-43dc-8140-94b6e9174510.png" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260322_092104_9bd53bd9-f200-4a5a-b856-e8a3c482fdec.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260322_092104_9bd53bd9-f200-4a5a-b856-e8a3c482fdec.png" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260322_092157_c211f027-59c4-423c-a111-2d415bcaac22.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260322_092157_c211f027-59c4-423c-a111-2d415bcaac22.png" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260322_093318_1e7e0306-5219-44b7-a281-55247eac66a2.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260322_093318_1e7e0306-5219-44b7-a281-55247eac66a2.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260322_140750_ec6c1d96-f329-4ebd-9da0-43a7f3a4f1c1.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260322_140750_ec6c1d96-f329-4ebd-9da0-43a7f3a4f1c1.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260323_121437_d927f023-31bd-4051-9b02-98363dad8fd0.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260323_121437_d927f023-31bd-4051-9b02-98363dad8fd0.png" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260323_122402_da5b760d-4621-450d-98ec-5f570ec38ba4.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260323_122402_da5b760d-4621-450d-98ec-5f570ec38ba4.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260323_122508_ff76b5b8-8525-4436-a2df-c9b43ecde781.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260323_122508_ff76b5b8-8525-4436-a2df-c9b43ecde781.png" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260323_122905_7783ead4-c9e8-417e-b800-a17eff36a9f4.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260323_122905_7783ead4-c9e8-417e-b800-a17eff36a9f4.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260323_123032_433c4b7e-7835-46ec-a55a-8f0c6e80ad68.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260323_123032_433c4b7e-7835-46ec-a55a-8f0c6e80ad68.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260323_123400_6d1dcf11-9193-428d-904d-8f4ba961ead4.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260323_123400_6d1dcf11-9193-428d-904d-8f4ba961ead4.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260323_123535_b8b756e7-538a-442c-adc0-38dbe3289744.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260323_123535_b8b756e7-538a-442c-adc0-38dbe3289744.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260323_123928_461792b7-7315-499d-9fa0-3108df592aba.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260323_123928_461792b7-7315-499d-9fa0-3108df592aba.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260323_124431_41103dc4-6d0b-48e9-88b7-aa5833e8f4b3.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260323_124431_41103dc4-6d0b-48e9-88b7-aa5833e8f4b3.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260323_125418_017fcf30-082a-4503-93b3-d9e0a6c6c507.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260323_125418_017fcf30-082a-4503-93b3-d9e0a6c6c507.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/hanse-470/hf_20260323_125747_ff40cae4-b34b-4bbb-b17b-776dac4e2b87.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/hanse-470/hf_20260323_125747_ff40cae4-b34b-4bbb-b17b-776dac4e2b87.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy"></a>
+        </div>
+        <button class="hero-arrow hero-arrow--prev" aria-label="Previous"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+        <button class="hero-arrow hero-arrow--next" aria-label="Next"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+        <span class="hero-counter">1 / 24</span>
+      </div>
+      <!-- Thumbnail Gallery -->
+      <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2 mt-4">
+        <a href="/assets/imagenes web/hanse-470/hf_20260322_074429_999836f6-29c8-4f55-94d3-c1e88aea7c40.png" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/hanse-470/hf_20260322_074429_999836f6-29c8-4f55-94d3-c1e88aea7c40.png" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260322_075028_203fa6d8-dddd-464b-8b08-36cc31b84610.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/hanse-470/hf_20260322_075028_203fa6d8-dddd-464b-8b08-36cc31b84610.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260322_082819_e08ab6c5-23ac-4a1f-84a9-75d61071f68d.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/hanse-470/hf_20260322_082819_e08ab6c5-23ac-4a1f-84a9-75d61071f68d.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260322_083342_ff16d777-b624-4869-bfde-0458b3af4163.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/hanse-470/hf_20260322_083342_ff16d777-b624-4869-bfde-0458b3af4163.jpeg" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260322_083551_cf7d2883-9e32-4ecb-a2d6-496525badc8a.png" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/hanse-470/hf_20260322_083551_cf7d2883-9e32-4ecb-a2d6-496525badc8a.png" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260322_084151_c20629aa-81f3-4219-b753-28f91e164ff8.png" class="glightbox relative block aspect-square overflow-hidden rounded-sm group" data-gallery="boat">
+          <img src="/assets/imagenes web/hanse-470/hf_20260322_084151_c20629aa-81f3-4219-b753-28f91e164ff8.png" alt="Hanse 470" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <span class="absolute inset-0 bg-dark-base/70 flex items-center justify-center text-txt-dark font-serif text-lg">+17</span>
+        </a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260322_084635_b32e4b59-6201-47d3-9b25-96ba0a0606b2.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260322_085700_60bcea76-5bff-43dc-8140-94b6e9174510.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260322_092104_9bd53bd9-f200-4a5a-b856-e8a3c482fdec.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260322_092157_c211f027-59c4-423c-a111-2d415bcaac22.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260322_093318_1e7e0306-5219-44b7-a281-55247eac66a2.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260322_140750_ec6c1d96-f329-4ebd-9da0-43a7f3a4f1c1.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260323_121437_d927f023-31bd-4051-9b02-98363dad8fd0.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260323_122402_da5b760d-4621-450d-98ec-5f570ec38ba4.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260323_122508_ff76b5b8-8525-4436-a2df-c9b43ecde781.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260323_122905_7783ead4-c9e8-417e-b800-a17eff36a9f4.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260323_123032_433c4b7e-7835-46ec-a55a-8f0c6e80ad68.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260323_123400_6d1dcf11-9193-428d-904d-8f4ba961ead4.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260323_123535_b8b756e7-538a-442c-adc0-38dbe3289744.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260323_123928_461792b7-7315-499d-9fa0-3108df592aba.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260323_124431_41103dc4-6d0b-48e9-88b7-aa5833e8f4b3.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260323_125418_017fcf30-082a-4503-93b3-d9e0a6c6c507.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/hanse-470/hf_20260323_125747_ff40cae4-b34b-4bbb-b17b-776dac4e2b87.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+      </div>
     </div>
   </section>
 
@@ -81,9 +176,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
 
       <!-- Left: Details -->
-      <div class="lg:col-span-3">
-        <div class="flex flex-wrap items-center gap-3 mb-4">
-          
+      <div class="lg:col-span-3"><div class="flex flex-wrap items-center gap-3 mb-4">
           <span class="text-[11px] font-light uppercase tracking-[0.2em] text-txt-dark-2/60">Hanse · Vela · Barcelona</span>
         </div>
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-txt-dark tracking-[-0.03em] leading-[1.1] font-light">Hanse 470</h1>
@@ -153,7 +246,7 @@
       <h2 class="font-serif text-2xl text-txt-dark tracking-[-0.03em] mb-8">Embarcaciones similares</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <a href="/es/barcos/ketch-nordic-36-classic-1981/" class="boat-card" aria-label="Ver Ketch Nordic 36 Classic">
-      <div class="boat-card-image"><img src="/assets/ketch-nordic-36-1.jpg" alt="Ketch Nordic 36 Classic" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045336_92a17267-5552-41ab-aa7a-a1b71e12cf74.png" alt="Ketch Nordic 36 Classic" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Ketch · 1981</span>
@@ -164,7 +257,7 @@
       </div>
     </a>
 <a href="/es/barcos/finnyacht-35-1972/" class="boat-card" aria-label="Ver Finnyacht FINM Cleaper 35">
-      <div class="boat-card-image"><img src="/assets/finnyacht-35-1.jpg" alt="Finnyacht FINM Cleaper 35" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_000503_64042838-41b9-4025-be99-57b6e6001e34.jpeg" alt="Finnyacht FINM Cleaper 35" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Finnyacht · 1972</span>
@@ -175,7 +268,7 @@
       </div>
     </a>
 <a href="/es/barcos/astondoa-53-glx-1993/" class="boat-card" aria-label="Ver Astondoa 53 GLX">
-      <div class="boat-card-image"><img src="/assets/astondoa-53-glx-1.jpg" alt="Astondoa 53 GLX" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/astondoa-53-glx/hf_20260318_152203_06971b46-ec2d-45eb-b214-42c28430a710.jpeg" alt="Astondoa 53 GLX" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Astondoa · 1993</span>
@@ -257,5 +350,26 @@
   <script>GLightbox({ selector: '.glightbox' });</script>
   <script src="/shared.js"></script>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.hero-slider-track');
+    if (!track) return;
+    const slides = track.children;
+    const total = slides.length;
+    const counter = document.querySelector('.hero-counter');
+    let idx = 0;
+    function go(i) {
+      idx = (i + total) % total;
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      if (counter) counter.textContent = (idx + 1) + ' / ' + total;
+    }
+    document.querySelector('.hero-arrow--prev')?.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); go(idx - 1); });
+    document.querySelector('.hero-arrow--next')?.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); go(idx + 1); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') go(idx - 1);
+      if (e.key === 'ArrowRight') go(idx + 1);
+    });
+  });
+  </script>
 </body>
 </html>

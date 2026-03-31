@@ -32,6 +32,34 @@
   </script>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <style>
+    .hero-slider { position: relative; overflow: hidden; border-radius: 2px; }
+    .hero-slider-track { display: flex; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .hero-slider-track > * { min-width: 100%; }
+    .hero-arrow {
+      position: absolute; top: 50%; z-index: 10;
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      background: rgba(11,18,32,0.45); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 50%; cursor: pointer;
+      color: rgba(242,237,232,0.8);
+      transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+      transform: translateY(-50%);
+    }
+    .hero-arrow:hover { background: rgba(0,119,204,0.55); color: #fff; box-shadow: 0 2px 16px rgba(0,119,204,0.25); }
+    .hero-arrow:active { transform: translateY(-50%) scale(0.93); }
+    .hero-arrow--prev { left: 12px; }
+    .hero-arrow--next { right: 12px; }
+    .hero-arrow svg { width: 18px; height: 18px; stroke-width: 2; }
+    .hero-counter {
+      position: absolute; bottom: 12px; right: 14px; z-index: 10;
+      font-size: 11px; letter-spacing: 0.06em; font-weight: 300;
+      color: rgba(242,237,232,0.7); background: rgba(11,18,32,0.45);
+      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.06); border-radius: 20px;
+      padding: 4px 12px; font-variant-numeric: tabular-nums;
+    }
+  </style>
 </head>
 <body class="bg-dark-base text-txt-dark font-sans antialiased">
 
@@ -69,10 +97,53 @@
           <li class="text-txt-dark-2/80">Ketch Nordic 36 Classic</li>
         </ol>
       </nav>
-      <!-- Main Image -->
-      <a href="/assets/ketch-nordic-36-1.jpg" class="glightbox block aspect-[16/9] overflow-hidden rounded-sm">
-        <img src="/assets/ketch-nordic-36-1.jpg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" style="transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </a>
+      <!-- Main Image Slider -->
+      <div class="hero-slider aspect-[16/9]">
+        <div class="hero-slider-track" style="height:100%;">
+          <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045336_92a17267-5552-41ab-aa7a-a1b71e12cf74.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045336_92a17267-5552-41ab-aa7a-a1b71e12cf74.png" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045338_82c0773e-4303-4010-bdd4-71ef22194fbb.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045338_82c0773e-4303-4010-bdd4-71ef22194fbb.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045826_4811e00d-6622-4bc6-864d-a735456c4d8b.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045826_4811e00d-6622-4bc6-864d-a735456c4d8b.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045904_ca313916-23ac-419e-8c8d-a85f2b3d7d86.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045904_ca313916-23ac-419e-8c8d-a85f2b3d7d86.png" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_050651_6d334c5b-01b4-4b35-9052-389e04480476.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_050651_6d334c5b-01b4-4b35-9052-389e04480476.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_050812_02cafa5d-badb-4d11-b21f-b874fae7eb38.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_050812_02cafa5d-badb-4d11-b21f-b874fae7eb38.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_051249_a72b0cbe-1eb6-440f-8c6e-d1c003ffbc79.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_051249_a72b0cbe-1eb6-440f-8c6e-d1c003ffbc79.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_051323_d38b69a1-4634-46e8-924b-feac2fda08d5.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_051323_d38b69a1-4634-46e8-924b-feac2fda08d5.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_051819_61800e5d-3134-4a22-a6b9-b0e6fb6f12b1.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_051819_61800e5d-3134-4a22-a6b9-b0e6fb6f12b1.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_052214_c5f8ab55-1634-4b75-a519-ed97ac0e1e70.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_052214_c5f8ab55-1634-4b75-a519-ed97ac0e1e70.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_052637_86d2c0a9-639f-4508-a6f2-9bb3d1feaf23.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_052637_86d2c0a9-639f-4508-a6f2-9bb3d1feaf23.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_053917_d7cc620e-5720-48b9-a918-b7a0692cf34c.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_053917_d7cc620e-5720-48b9-a918-b7a0692cf34c.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy"></a>
+        </div>
+        <button class="hero-arrow hero-arrow--prev" aria-label="Previous"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+        <button class="hero-arrow hero-arrow--next" aria-label="Next"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+        <span class="hero-counter">1 / 12</span>
+      </div>
+      <!-- Thumbnail Gallery -->
+      <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2 mt-4">
+        <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045338_82c0773e-4303-4010-bdd4-71ef22194fbb.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045338_82c0773e-4303-4010-bdd4-71ef22194fbb.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045826_4811e00d-6622-4bc6-864d-a735456c4d8b.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045826_4811e00d-6622-4bc6-864d-a735456c4d8b.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045904_ca313916-23ac-419e-8c8d-a85f2b3d7d86.png" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_045904_ca313916-23ac-419e-8c8d-a85f2b3d7d86.png" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_050651_6d334c5b-01b4-4b35-9052-389e04480476.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_050651_6d334c5b-01b4-4b35-9052-389e04480476.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_050812_02cafa5d-badb-4d11-b21f-b874fae7eb38.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_050812_02cafa5d-badb-4d11-b21f-b874fae7eb38.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_051249_a72b0cbe-1eb6-440f-8c6e-d1c003ffbc79.jpeg" class="glightbox relative block aspect-square overflow-hidden rounded-sm group" data-gallery="boat">
+          <img src="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_051249_a72b0cbe-1eb6-440f-8c6e-d1c003ffbc79.jpeg" alt="Ketch Nordic 36 Classic" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <span class="absolute inset-0 bg-dark-base/70 flex items-center justify-center text-txt-dark font-serif text-lg">+5</span>
+        </a>
+        <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_051323_d38b69a1-4634-46e8-924b-feac2fda08d5.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_051819_61800e5d-3134-4a22-a6b9-b0e6fb6f12b1.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_052214_c5f8ab55-1634-4b75-a519-ed97ac0e1e70.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_052637_86d2c0a9-639f-4508-a6f2-9bb3d1feaf23.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/ketch-nordic-36-classic/hf_20260321_053917_d7cc620e-5720-48b9-a918-b7a0692cf34c.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+      </div>
     </div>
   </section>
 
@@ -83,7 +154,6 @@
       <!-- Left: Details -->
       <div class="lg:col-span-3">
         <div class="flex flex-wrap items-center gap-3 mb-4">
-          <span class="badge badge-new">New</span>
           <span class="text-[11px] font-light uppercase tracking-[0.2em] text-txt-dark-2/60">Ketch · Sail · El Masnou</span>
         </div>
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-txt-dark tracking-[-0.03em] leading-[1.1] font-light">Ketch Nordic 36 Classic</h1>
@@ -153,7 +223,7 @@
       <h2 class="font-serif text-2xl text-txt-dark tracking-[-0.03em] mb-8">Similar Yachts</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <a href="/en/boats/finnyacht-35-1972/" class="boat-card" aria-label="View Finnyacht FINM Cleaper 35">
-      <div class="boat-card-image"><img src="/assets/finnyacht-35-1.jpg" alt="Finnyacht FINM Cleaper 35" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/finnyacht-finm-cleaper-35/hf_20260322_000503_64042838-41b9-4025-be99-57b6e6001e34.jpeg" alt="Finnyacht FINM Cleaper 35" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Finnyacht · 1972</span>
@@ -164,7 +234,7 @@
       </div>
     </a>
 <a href="/en/boats/hanse-470-2007/" class="boat-card" aria-label="View Hanse 470">
-      <div class="boat-card-image"><img src="/assets/hanse-470-1.jpg" alt="Hanse 470" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/hanse-470/a.jpeg" alt="Hanse 470" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Hanse · 2007</span>
@@ -175,7 +245,7 @@
       </div>
     </a>
 <a href="/en/boats/rodman-900-flybridge-1996/" class="boat-card" aria-label="View Rodman 900 FLY">
-      <div class="boat-card-image"><img src="/assets/rodman-900-1.jpg" alt="Rodman 900 FLY" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_073715_656d2341-d671-4ec2-b08b-246da7a6f441.png" alt="Rodman 900 FLY" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Rodman · 1996</span>
@@ -257,5 +327,26 @@
   <script>GLightbox({ selector: '.glightbox' });</script>
   <script src="/shared.js"></script>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.hero-slider-track');
+    if (!track) return;
+    const slides = track.children;
+    const total = slides.length;
+    const counter = document.querySelector('.hero-counter');
+    let idx = 0;
+    function go(i) {
+      idx = (i + total) % total;
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      if (counter) counter.textContent = (idx + 1) + ' / ' + total;
+    }
+    document.querySelector('.hero-arrow--prev')?.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); go(idx - 1); });
+    document.querySelector('.hero-arrow--next')?.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); go(idx + 1); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') go(idx - 1);
+      if (e.key === 'ArrowRight') go(idx + 1);
+    });
+  });
+  </script>
 </body>
 </html>

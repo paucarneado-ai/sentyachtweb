@@ -32,6 +32,34 @@
   </script>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <style>
+    .hero-slider { position: relative; overflow: hidden; border-radius: 2px; }
+    .hero-slider-track { display: flex; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .hero-slider-track > * { min-width: 100%; }
+    .hero-arrow {
+      position: absolute; top: 50%; z-index: 10;
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      background: rgba(11,18,32,0.45); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 50%; cursor: pointer;
+      color: rgba(242,237,232,0.8);
+      transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+      transform: translateY(-50%);
+    }
+    .hero-arrow:hover { background: rgba(0,119,204,0.55); color: #fff; box-shadow: 0 2px 16px rgba(0,119,204,0.25); }
+    .hero-arrow:active { transform: translateY(-50%) scale(0.93); }
+    .hero-arrow--prev { left: 12px; }
+    .hero-arrow--next { right: 12px; }
+    .hero-arrow svg { width: 18px; height: 18px; stroke-width: 2; }
+    .hero-counter {
+      position: absolute; bottom: 12px; right: 14px; z-index: 10;
+      font-size: 11px; letter-spacing: 0.06em; font-weight: 300;
+      color: rgba(242,237,232,0.7); background: rgba(11,18,32,0.45);
+      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.06); border-radius: 20px;
+      padding: 4px 12px; font-variant-numeric: tabular-nums;
+    }
+  </style>
 </head>
 <body class="bg-dark-base text-txt-dark font-sans antialiased">
 
@@ -69,10 +97,69 @@
           <li class="text-txt-dark-2/80">Astondoa 39</li>
         </ol>
       </nav>
-      <!-- Main Image -->
-      <a href="/assets/astondoa-39-1.jpg" class="glightbox block aspect-[16/9] overflow-hidden rounded-sm">
-        <img src="/assets/astondoa-39-1.jpg" alt="Astondoa 39" class="w-full h-full object-cover" style="transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </a>
+      <!-- Main Image Slider -->
+      <div class="hero-slider aspect-[16/9]">
+        <div class="hero-slider-track" style="height:100%;">
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_004843_15fba525-6b07-4778-8e8a-8d19dbcba4cc.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_004843_15fba525-6b07-4778-8e8a-8d19dbcba4cc.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_004938_432eec0c-5e9f-4b7e-a29b-90aabe41f7fa.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_004938_432eec0c-5e9f-4b7e-a29b-90aabe41f7fa.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_005337_8154186a-b5f7-4f2e-806e-31ba992a5c34.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_005337_8154186a-b5f7-4f2e-806e-31ba992a5c34.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_005457_0715ec97-ae87-44bf-80c1-328ec8baa1d0.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_005457_0715ec97-ae87-44bf-80c1-328ec8baa1d0.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_005839_7689154a-9a16-489e-9a62-74dc73c43df3.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_005839_7689154a-9a16-489e-9a62-74dc73c43df3.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_010001_a621edfb-a988-44b3-84ba-0512d1ee1208.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_010001_a621edfb-a988-44b3-84ba-0512d1ee1208.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_010352_19613452-e98e-48f5-9d61-c562a92a8f82.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_010352_19613452-e98e-48f5-9d61-c562a92a8f82.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_010556_ca382bc9-031f-4370-8283-8cf695179e57.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_010556_ca382bc9-031f-4370-8283-8cf695179e57.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_010904_8449f1d9-1597-401a-8688-46d153436b1a.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_010904_8449f1d9-1597-401a-8688-46d153436b1a.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_011118_463b71e0-20b3-491f-9020-f040bebdd90e.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_011118_463b71e0-20b3-491f-9020-f040bebdd90e.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_011449_07d5b33c-da6b-4d66-8e26-2883e79dbd37.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_011449_07d5b33c-da6b-4d66-8e26-2883e79dbd37.png" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_011617_f7e371bb-a843-452a-9483-e1519d15ebcd.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_011617_f7e371bb-a843-452a-9483-e1519d15ebcd.png" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_012001_77fbae40-1ec0-4b8d-a9c2-16b72bbefc65.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_012001_77fbae40-1ec0-4b8d-a9c2-16b72bbefc65.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_012121_9f6bf161-bf16-49a8-a2cd-c366b54eb826.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_012121_9f6bf161-bf16-49a8-a2cd-c366b54eb826.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_012537_b6837ac5-0600-4618-9503-bd4e6bc0120b.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_012537_b6837ac5-0600-4618-9503-bd4e6bc0120b.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_013102_97b7095f-6c19-4021-ad01-f375635d271f.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_013102_97b7095f-6c19-4021-ad01-f375635d271f.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_013144_5ca800e8-b0a1-426a-b9bc-b3a3233f1870.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_013144_5ca800e8-b0a1-426a-b9bc-b3a3233f1870.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_020342_feb45fdf-7b23-4b72-8ac9-6ee9e405cb27.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_020342_feb45fdf-7b23-4b72-8ac9-6ee9e405cb27.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/hf_20260324_020939_8ce1f72d-bceb-48b5-b333-3a5f3e09e1a2.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/hf_20260324_020939_8ce1f72d-bceb-48b5-b333-3a5f3e09e1a2.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/astondoa-39/z.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/astondoa-39/z.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy"></a>
+        </div>
+        <button class="hero-arrow hero-arrow--prev" aria-label="Previous"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+        <button class="hero-arrow hero-arrow--next" aria-label="Next"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+        <span class="hero-counter">1 / 20</span>
+      </div>
+      <!-- Thumbnail Gallery -->
+      <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2 mt-4">
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_004938_432eec0c-5e9f-4b7e-a29b-90aabe41f7fa.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/astondoa-39/hf_20260324_004938_432eec0c-5e9f-4b7e-a29b-90aabe41f7fa.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_005337_8154186a-b5f7-4f2e-806e-31ba992a5c34.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/astondoa-39/hf_20260324_005337_8154186a-b5f7-4f2e-806e-31ba992a5c34.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_005457_0715ec97-ae87-44bf-80c1-328ec8baa1d0.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/astondoa-39/hf_20260324_005457_0715ec97-ae87-44bf-80c1-328ec8baa1d0.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_005839_7689154a-9a16-489e-9a62-74dc73c43df3.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/astondoa-39/hf_20260324_005839_7689154a-9a16-489e-9a62-74dc73c43df3.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_010001_a621edfb-a988-44b3-84ba-0512d1ee1208.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/astondoa-39/hf_20260324_010001_a621edfb-a988-44b3-84ba-0512d1ee1208.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_010352_19613452-e98e-48f5-9d61-c562a92a8f82.jpeg" class="glightbox relative block aspect-square overflow-hidden rounded-sm group" data-gallery="boat">
+          <img src="/assets/imagenes web/astondoa-39/hf_20260324_010352_19613452-e98e-48f5-9d61-c562a92a8f82.jpeg" alt="Astondoa 39" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <span class="absolute inset-0 bg-dark-base/70 flex items-center justify-center text-txt-dark font-serif text-lg">+13</span>
+        </a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_010556_ca382bc9-031f-4370-8283-8cf695179e57.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_010904_8449f1d9-1597-401a-8688-46d153436b1a.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_011118_463b71e0-20b3-491f-9020-f040bebdd90e.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_011449_07d5b33c-da6b-4d66-8e26-2883e79dbd37.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_011617_f7e371bb-a843-452a-9483-e1519d15ebcd.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_012001_77fbae40-1ec0-4b8d-a9c2-16b72bbefc65.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_012121_9f6bf161-bf16-49a8-a2cd-c366b54eb826.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_012537_b6837ac5-0600-4618-9503-bd4e6bc0120b.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_013102_97b7095f-6c19-4021-ad01-f375635d271f.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_013144_5ca800e8-b0a1-426a-b9bc-b3a3233f1870.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_020342_feb45fdf-7b23-4b72-8ac9-6ee9e405cb27.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/astondoa-39/hf_20260324_020939_8ce1f72d-bceb-48b5-b333-3a5f3e09e1a2.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/astondoa-39/z.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+      </div>
     </div>
   </section>
 
@@ -83,7 +170,6 @@
       <!-- Left: Details -->
       <div class="lg:col-span-3">
         <div class="flex flex-wrap items-center gap-3 mb-4">
-          <span class="badge badge-stock">En stock</span> <span class="badge badge-price-drop">Precio rebajado</span>
           <span class="text-[11px] font-light uppercase tracking-[0.2em] text-txt-dark-2/60">Astondoa · Motor · El Masnou</span>
         </div>
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-txt-dark tracking-[-0.03em] leading-[1.1] font-light">Astondoa 39</h1>
@@ -153,7 +239,7 @@
       <h2 class="font-serif text-2xl text-txt-dark tracking-[-0.03em] mb-8">Embarcaciones similares</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <a href="/es/barcos/grand-banks-38-eastbay-ex-2002/" class="boat-card" aria-label="Ver Grand Banks 38 Eastbay EX">
-      <div class="boat-card-image"><img src="/assets/grand-banks-38-eastbay-ex-1.jpg" alt="Grand Banks 38 Eastbay EX" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/grand-banks-38-eastbay-ex/hf_20260322_060419_71948115-6161-48cb-b2d3-1f30de97800c.jpeg" alt="Grand Banks 38 Eastbay EX" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Grand Banks · 2002</span>
@@ -164,7 +250,7 @@
       </div>
     </a>
 <a href="/es/barcos/astondoa-53-glx-1993/" class="boat-card" aria-label="Ver Astondoa 53 GLX">
-      <div class="boat-card-image"><img src="/assets/astondoa-53-glx-1.jpg" alt="Astondoa 53 GLX" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/astondoa-53-glx/hf_20260318_152203_06971b46-ec2d-45eb-b214-42c28430a710.jpeg" alt="Astondoa 53 GLX" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Astondoa · 1993</span>
@@ -175,7 +261,7 @@
       </div>
     </a>
 <a href="/es/barcos/rodman-900-flybridge-1996/" class="boat-card" aria-label="Ver Rodman 900 FLY">
-      <div class="boat-card-image"><img src="/assets/rodman-900-1.jpg" alt="Rodman 900 FLY" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_073715_656d2341-d671-4ec2-b08b-246da7a6f441.png" alt="Rodman 900 FLY" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Rodman · 1996</span>
@@ -257,5 +343,26 @@
   <script>GLightbox({ selector: '.glightbox' });</script>
   <script src="/shared.js"></script>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.hero-slider-track');
+    if (!track) return;
+    const slides = track.children;
+    const total = slides.length;
+    const counter = document.querySelector('.hero-counter');
+    let idx = 0;
+    function go(i) {
+      idx = (i + total) % total;
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      if (counter) counter.textContent = (idx + 1) + ' / ' + total;
+    }
+    document.querySelector('.hero-arrow--prev')?.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); go(idx - 1); });
+    document.querySelector('.hero-arrow--next')?.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); go(idx + 1); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') go(idx - 1);
+      if (e.key === 'ArrowRight') go(idx + 1);
+    });
+  });
+  </script>
 </body>
 </html>

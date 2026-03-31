@@ -32,6 +32,34 @@
   </script>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <style>
+    .hero-slider { position: relative; overflow: hidden; border-radius: 2px; }
+    .hero-slider-track { display: flex; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .hero-slider-track > * { min-width: 100%; }
+    .hero-arrow {
+      position: absolute; top: 50%; z-index: 10;
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      background: rgba(11,18,32,0.45); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 50%; cursor: pointer;
+      color: rgba(242,237,232,0.8);
+      transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+      transform: translateY(-50%);
+    }
+    .hero-arrow:hover { background: rgba(0,119,204,0.55); color: #fff; box-shadow: 0 2px 16px rgba(0,119,204,0.25); }
+    .hero-arrow:active { transform: translateY(-50%) scale(0.93); }
+    .hero-arrow--prev { left: 12px; }
+    .hero-arrow--next { right: 12px; }
+    .hero-arrow svg { width: 18px; height: 18px; stroke-width: 2; }
+    .hero-counter {
+      position: absolute; bottom: 12px; right: 14px; z-index: 10;
+      font-size: 11px; letter-spacing: 0.06em; font-weight: 300;
+      color: rgba(242,237,232,0.7); background: rgba(11,18,32,0.45);
+      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.06); border-radius: 20px;
+      padding: 4px 12px; font-variant-numeric: tabular-nums;
+    }
+  </style>
 </head>
 <body class="bg-dark-base text-txt-dark font-sans antialiased">
 
@@ -69,10 +97,61 @@
           <li class="text-txt-dark-2/80">Rodman 900 FLY</li>
         </ol>
       </nav>
-      <!-- Main Image -->
-      <a href="/assets/rodman-900-1.jpg" class="glightbox block aspect-[16/9] overflow-hidden rounded-sm">
-        <img src="/assets/rodman-900-1.jpg" alt="Rodman 900 FLY" class="w-full h-full object-cover" style="transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </a>
+      <!-- Main Image Slider -->
+      <div class="hero-slider aspect-[16/9]">
+        <div class="hero-slider-track" style="height:100%;">
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_073715_656d2341-d671-4ec2-b08b-246da7a6f441.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_073715_656d2341-d671-4ec2-b08b-246da7a6f441.png" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_074456_9b8a89d7-2f2a-410e-93ac-c2de6a49c5d0.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_074456_9b8a89d7-2f2a-410e-93ac-c2de6a49c5d0.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_074709_dbfea83a-9648-4e27-ae48-47c439fbbb2a.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_074709_dbfea83a-9648-4e27-ae48-47c439fbbb2a.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_075359_e297c435-f731-4554-b2ba-a379615bf96f.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_075359_e297c435-f731-4554-b2ba-a379615bf96f.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_075519_96f7c57a-b18a-4a16-88d7-73726c227541.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_075519_96f7c57a-b18a-4a16-88d7-73726c227541.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_080133_269dca23-f857-4a1f-a077-256c9c714d7a.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_080133_269dca23-f857-4a1f-a077-256c9c714d7a.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_080352_9316b141-8c90-4082-b6a9-7c66516254a8.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_080352_9316b141-8c90-4082-b6a9-7c66516254a8.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_080619_152d1480-1a97-48bc-8d99-b2229358e30a.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_080619_152d1480-1a97-48bc-8d99-b2229358e30a.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_081914_1d641430-21fa-4fd3-ba7f-c415295ab408.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_081914_1d641430-21fa-4fd3-ba7f-c415295ab408.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_082406_842e8349-c110-462b-9d84-6e2639ed9cc8.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_082406_842e8349-c110-462b-9d84-6e2639ed9cc8.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_082650_426bf1f4-5d86-4079-8a60-5c29cb77e767.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_082650_426bf1f4-5d86-4079-8a60-5c29cb77e767.png" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_083012_e693f406-1796-4758-8ce3-0a5cfa3ca405.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_083012_e693f406-1796-4758-8ce3-0a5cfa3ca405.png" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_083227_f0655709-5887-42bd-b55e-e7f288765a5e.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_083227_f0655709-5887-42bd-b55e-e7f288765a5e.png" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_083646_c6d50367-b771-4a36-90fc-37946e35592c.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_083646_c6d50367-b771-4a36-90fc-37946e35592c.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_083819_6840dd29-e29b-4075-8107-fe4c8d721cbe.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_083819_6840dd29-e29b-4075-8107-fe4c8d721cbe.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_084916_b5456049-1e90-4e88-90a1-8b3064d7d7cb.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/rodman-900-fly/hf_20260321_084916_b5456049-1e90-4e88-90a1-8b3064d7d7cb.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy"></a>
+        </div>
+        <button class="hero-arrow hero-arrow--prev" aria-label="Previous"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+        <button class="hero-arrow hero-arrow--next" aria-label="Next"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+        <span class="hero-counter">1 / 16</span>
+      </div>
+      <!-- Thumbnail Gallery -->
+      <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2 mt-4">
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_074456_9b8a89d7-2f2a-410e-93ac-c2de6a49c5d0.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/rodman-900-fly/hf_20260321_074456_9b8a89d7-2f2a-410e-93ac-c2de6a49c5d0.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_074709_dbfea83a-9648-4e27-ae48-47c439fbbb2a.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/rodman-900-fly/hf_20260321_074709_dbfea83a-9648-4e27-ae48-47c439fbbb2a.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_075359_e297c435-f731-4554-b2ba-a379615bf96f.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/rodman-900-fly/hf_20260321_075359_e297c435-f731-4554-b2ba-a379615bf96f.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_075519_96f7c57a-b18a-4a16-88d7-73726c227541.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/rodman-900-fly/hf_20260321_075519_96f7c57a-b18a-4a16-88d7-73726c227541.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_080133_269dca23-f857-4a1f-a077-256c9c714d7a.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/rodman-900-fly/hf_20260321_080133_269dca23-f857-4a1f-a077-256c9c714d7a.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_080352_9316b141-8c90-4082-b6a9-7c66516254a8.jpeg" class="glightbox relative block aspect-square overflow-hidden rounded-sm group" data-gallery="boat">
+          <img src="/assets/imagenes web/rodman-900-fly/hf_20260321_080352_9316b141-8c90-4082-b6a9-7c66516254a8.jpeg" alt="Rodman 900 FLY" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <span class="absolute inset-0 bg-dark-base/70 flex items-center justify-center text-txt-dark font-serif text-lg">+9</span>
+        </a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_080619_152d1480-1a97-48bc-8d99-b2229358e30a.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_081914_1d641430-21fa-4fd3-ba7f-c415295ab408.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_082406_842e8349-c110-462b-9d84-6e2639ed9cc8.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_082650_426bf1f4-5d86-4079-8a60-5c29cb77e767.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_083012_e693f406-1796-4758-8ce3-0a5cfa3ca405.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_083227_f0655709-5887-42bd-b55e-e7f288765a5e.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_083646_c6d50367-b771-4a36-90fc-37946e35592c.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_083819_6840dd29-e29b-4075-8107-fe4c8d721cbe.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/rodman-900-fly/hf_20260321_084916_b5456049-1e90-4e88-90a1-8b3064d7d7cb.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+      </div>
     </div>
   </section>
 
@@ -83,7 +162,6 @@
       <!-- Left: Details -->
       <div class="lg:col-span-3">
         <div class="flex flex-wrap items-center gap-3 mb-4">
-          <span class="badge badge-stock">In Stock</span> <span class="badge badge-price-drop">Price Drop</span>
           <span class="text-[11px] font-light uppercase tracking-[0.2em] text-txt-dark-2/60">Rodman · Motor · El Masnou</span>
         </div>
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-txt-dark tracking-[-0.03em] leading-[1.1] font-light">Rodman 900 FLY</h1>
@@ -153,7 +231,7 @@
       <h2 class="font-serif text-2xl text-txt-dark tracking-[-0.03em] mb-8">Similar Yachts</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <a href="/en/boats/fjord-900-1990/" class="boat-card" aria-label="View Fjord 900">
-      <div class="boat-card-image"><img src="/assets/fjord-900-1.jpg" alt="Fjord 900" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/fjord-900/hf_20260321_054728_e2717c99-daec-4cf0-95b7-759fea3ae8cf.jpeg" alt="Fjord 900" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Fjord · 1990</span>
@@ -164,7 +242,7 @@
       </div>
     </a>
 <a href="/en/boats/astondoa-39-2002/" class="boat-card" aria-label="View Astondoa 39">
-      <div class="boat-card-image"><img src="/assets/astondoa-39-1.jpg" alt="Astondoa 39" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/astondoa-39/hf_20260324_004843_15fba525-6b07-4778-8e8a-8d19dbcba4cc.jpeg" alt="Astondoa 39" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Astondoa · 2002</span>
@@ -175,7 +253,7 @@
       </div>
     </a>
 <a href="/en/boats/grand-banks-38-eastbay-ex-2002/" class="boat-card" aria-label="View Grand Banks 38 Eastbay EX">
-      <div class="boat-card-image"><img src="/assets/grand-banks-38-eastbay-ex-1.jpg" alt="Grand Banks 38 Eastbay EX" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/grand-banks-38-eastbay-ex/hf_20260322_060419_71948115-6161-48cb-b2d3-1f30de97800c.jpeg" alt="Grand Banks 38 Eastbay EX" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Grand Banks · 2002</span>
@@ -257,5 +335,26 @@
   <script>GLightbox({ selector: '.glightbox' });</script>
   <script src="/shared.js"></script>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.hero-slider-track');
+    if (!track) return;
+    const slides = track.children;
+    const total = slides.length;
+    const counter = document.querySelector('.hero-counter');
+    let idx = 0;
+    function go(i) {
+      idx = (i + total) % total;
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      if (counter) counter.textContent = (idx + 1) + ' / ' + total;
+    }
+    document.querySelector('.hero-arrow--prev')?.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); go(idx - 1); });
+    document.querySelector('.hero-arrow--next')?.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); go(idx + 1); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') go(idx - 1);
+      if (e.key === 'ArrowRight') go(idx + 1);
+    });
+  });
+  </script>
 </body>
 </html>

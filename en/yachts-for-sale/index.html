@@ -410,16 +410,10 @@
       noResults.classList.add('hidden');
 
       grid.innerHTML = filtered.map(boat => {
-        const badgeHTML = boat.badges.map(b => {
-          const labels = { stock: 'In Stock', new: 'New', 'price-drop': 'Price Drop' };
-          const classes = { stock: 'badge-stock', new: 'badge-new', 'price-drop': 'badge-price-drop' };
-          return `<span class="badge ${classes[b]}">${labels[b]}</span>`;
-        }).join('');
         const img = boat.images[0];
         return `<a href="/en/boats/${boat.slug}/" class="boat-card" aria-label="View ${boat.name}">
           <div class="boat-card-image">
             <img src="/assets/${img}" alt="${boat.name} - ${boat.year} - ${boat.location}" loading="lazy">
-            ${badgeHTML ? `<div class="absolute top-3 left-3 flex gap-2">${badgeHTML}</div>` : ''}
           </div>
           <div class="p-5">
             <div class="flex items-baseline justify-between mb-3">

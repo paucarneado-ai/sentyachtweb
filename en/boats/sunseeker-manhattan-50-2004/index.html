@@ -32,6 +32,34 @@
   </script>
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+
+  <style>
+    .hero-slider { position: relative; overflow: hidden; border-radius: 2px; }
+    .hero-slider-track { display: flex; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+    .hero-slider-track > * { min-width: 100%; }
+    .hero-arrow {
+      position: absolute; top: 50%; z-index: 10;
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      background: rgba(11,18,32,0.45); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.08); border-radius: 50%; cursor: pointer;
+      color: rgba(242,237,232,0.8);
+      transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+      transform: translateY(-50%);
+    }
+    .hero-arrow:hover { background: rgba(0,119,204,0.55); color: #fff; box-shadow: 0 2px 16px rgba(0,119,204,0.25); }
+    .hero-arrow:active { transform: translateY(-50%) scale(0.93); }
+    .hero-arrow--prev { left: 12px; }
+    .hero-arrow--next { right: 12px; }
+    .hero-arrow svg { width: 18px; height: 18px; stroke-width: 2; }
+    .hero-counter {
+      position: absolute; bottom: 12px; right: 14px; z-index: 10;
+      font-size: 11px; letter-spacing: 0.06em; font-weight: 300;
+      color: rgba(242,237,232,0.7); background: rgba(11,18,32,0.45);
+      backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+      border: 1px solid rgba(255,255,255,0.06); border-radius: 20px;
+      padding: 4px 12px; font-variant-numeric: tabular-nums;
+    }
+  </style>
 </head>
 <body class="bg-dark-base text-txt-dark font-sans antialiased">
 
@@ -69,10 +97,65 @@
           <li class="text-txt-dark-2/80">Sunseeker Manhattan 50</li>
         </ol>
       </nav>
-      <!-- Main Image -->
-      <a href="/assets/sunseeker-manhattan-50-1.jpg" class="glightbox block aspect-[16/9] overflow-hidden rounded-sm">
-        <img src="/assets/sunseeker-manhattan-50-1.jpg" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" style="transition: transform 0.6s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-      </a>
+      <!-- Main Image Slider -->
+      <div class="hero-slider aspect-[16/9]">
+        <div class="hero-slider-track" style="height:100%;">
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_030855_5430fefe-a3bb-4554-9aaa-3ece892f6f50.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_030855_5430fefe-a3bb-4554-9aaa-3ece892f6f50.jpeg" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_030928_2c51028c-a633-41a8-a377-a4e615a93366.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_030928_2c51028c-a633-41a8-a377-a4e615a93366.jpeg" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_031639_85a5ea5d-fa8f-4b45-8888-1218473ac2dc.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_031639_85a5ea5d-fa8f-4b45-8888-1218473ac2dc.jpeg" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_031722_78a3b27d-685b-4fd0-a7ed-4daeb5f69aa3.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_031722_78a3b27d-685b-4fd0-a7ed-4daeb5f69aa3.jpeg" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_032334_d56b132c-30af-443a-b940-15750b2f7173.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_032334_d56b132c-30af-443a-b940-15750b2f7173.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_032404_a97b73a5-6015-4f38-a2c0-8693133af8be.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_032404_a97b73a5-6015-4f38-a2c0-8693133af8be.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_032853_73267fd5-5c29-4323-8b21-c41f8089b2f5.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_032853_73267fd5-5c29-4323-8b21-c41f8089b2f5.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_033134_e0061bb2-99f8-4499-8394-90e5eafcb77e.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_033134_e0061bb2-99f8-4499-8394-90e5eafcb77e.jpeg" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_033519_7cc3978e-a54c-4f16-adae-9a0f994faed5.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_033519_7cc3978e-a54c-4f16-adae-9a0f994faed5.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_033551_a0410061-6681-4a40-964b-f13f28df845a.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_033551_a0410061-6681-4a40-964b-f13f28df845a.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_034107_bf1424dd-59c9-4bc9-991d-4efb2c37a99e.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_034107_bf1424dd-59c9-4bc9-991d-4efb2c37a99e.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_034227_4c35739c-f7b2-402d-9535-4748d4e16cba.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_034227_4c35739c-f7b2-402d-9535-4748d4e16cba.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_034729_e637e0fc-8624-43cc-acf9-2a96b6338cd2.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_034729_e637e0fc-8624-43cc-acf9-2a96b6338cd2.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_034818_9a0a420c-94a8-4988-ba5b-974846aa4d2b.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_034818_9a0a420c-94a8-4988-ba5b-974846aa4d2b.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_035224_b600550a-ae19-4074-b3aa-fff0e65e24fe.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_035224_b600550a-ae19-4074-b3aa-fff0e65e24fe.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_035431_11d7983c-abf9-43d3-8326-36359a0a6b8d.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_035431_11d7983c-abf9-43d3-8326-36359a0a6b8d.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_043101_3e5fdbde-2829-4f63-a647-c4afccf72f86.jpeg" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_043101_3e5fdbde-2829-4f63-a647-c4afccf72f86.jpeg" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+          <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_045807_b5c241f0-672b-4c58-9cf9-6040a6f6d9c4.png" class="glightbox block aspect-[16/9]" data-gallery="boat"><img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_045807_b5c241f0-672b-4c58-9cf9-6040a6f6d9c4.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy"></a>
+        </div>
+        <button class="hero-arrow hero-arrow--prev" aria-label="Previous"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg></button>
+        <button class="hero-arrow hero-arrow--next" aria-label="Next"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></button>
+        <span class="hero-counter">1 / 18</span>
+      </div>
+      <!-- Thumbnail Gallery -->
+      <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-2 mt-4">
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_030928_2c51028c-a633-41a8-a377-a4e615a93366.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_030928_2c51028c-a633-41a8-a377-a4e615a93366.jpeg" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_031639_85a5ea5d-fa8f-4b45-8888-1218473ac2dc.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_031639_85a5ea5d-fa8f-4b45-8888-1218473ac2dc.jpeg" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_031722_78a3b27d-685b-4fd0-a7ed-4daeb5f69aa3.jpeg" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_031722_78a3b27d-685b-4fd0-a7ed-4daeb5f69aa3.jpeg" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_032334_d56b132c-30af-443a-b940-15750b2f7173.png" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_032334_d56b132c-30af-443a-b940-15750b2f7173.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_032404_a97b73a5-6015-4f38-a2c0-8693133af8be.png" class="glightbox block aspect-square overflow-hidden rounded-sm" data-gallery="boat">
+          <img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_032404_a97b73a5-6015-4f38-a2c0-8693133af8be.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+        </a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_032853_73267fd5-5c29-4323-8b21-c41f8089b2f5.png" class="glightbox relative block aspect-square overflow-hidden rounded-sm group" data-gallery="boat">
+          <img src="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_032853_73267fd5-5c29-4323-8b21-c41f8089b2f5.png" alt="Sunseeker Manhattan 50" class="w-full h-full object-cover" loading="lazy" style="transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+          <span class="absolute inset-0 bg-dark-base/70 flex items-center justify-center text-txt-dark font-serif text-lg">+11</span>
+        </a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_033134_e0061bb2-99f8-4499-8394-90e5eafcb77e.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_033519_7cc3978e-a54c-4f16-adae-9a0f994faed5.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_033551_a0410061-6681-4a40-964b-f13f28df845a.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_034107_bf1424dd-59c9-4bc9-991d-4efb2c37a99e.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_034227_4c35739c-f7b2-402d-9535-4748d4e16cba.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_034729_e637e0fc-8624-43cc-acf9-2a96b6338cd2.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_034818_9a0a420c-94a8-4988-ba5b-974846aa4d2b.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_035224_b600550a-ae19-4074-b3aa-fff0e65e24fe.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_035431_11d7983c-abf9-43d3-8326-36359a0a6b8d.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_043101_3e5fdbde-2829-4f63-a647-c4afccf72f86.jpeg" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+        <a href="/assets/imagenes web/sunseeker-manhattan-50/hf_20260322_045807_b5c241f0-672b-4c58-9cf9-6040a6f6d9c4.png" class="glightbox hidden" data-gallery="boat" aria-hidden="true"></a>
+      </div>
     </div>
   </section>
 
@@ -83,7 +166,6 @@
       <!-- Left: Details -->
       <div class="lg:col-span-3">
         <div class="flex flex-wrap items-center gap-3 mb-4">
-          <span class="badge badge-stock">In Stock</span>
           <span class="text-[11px] font-light uppercase tracking-[0.2em] text-txt-dark-2/60">Sunseeker · Motor · El Masnou</span>
         </div>
         <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-txt-dark tracking-[-0.03em] leading-[1.1] font-light">Sunseeker Manhattan 50</h1>
@@ -153,7 +235,7 @@
       <h2 class="font-serif text-2xl text-txt-dark tracking-[-0.03em] mb-8">Similar Yachts</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         <a href="/en/boats/navalia-60-2006/" class="boat-card" aria-label="View Navalia 60">
-      <div class="boat-card-image"><img src="/assets/navalia-60-1.jpg" alt="Navalia 60" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/navalia-60/hf_20260323_233241_b67cdada-061a-4c59-9645-3cbe11a9a06d.jpeg" alt="Navalia 60" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Navalia · 2006</span>
@@ -164,7 +246,7 @@
       </div>
     </a>
 <a href="/en/boats/astondoa-53-glx-1993/" class="boat-card" aria-label="View Astondoa 53 GLX">
-      <div class="boat-card-image"><img src="/assets/astondoa-53-glx-1.jpg" alt="Astondoa 53 GLX" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/astondoa-53-glx/hf_20260318_152203_06971b46-ec2d-45eb-b214-42c28430a710.jpeg" alt="Astondoa 53 GLX" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Astondoa · 1993</span>
@@ -175,7 +257,7 @@
       </div>
     </a>
 <a href="/en/boats/grand-banks-38-eastbay-ex-2002/" class="boat-card" aria-label="View Grand Banks 38 Eastbay EX">
-      <div class="boat-card-image"><img src="/assets/grand-banks-38-eastbay-ex-1.jpg" alt="Grand Banks 38 Eastbay EX" loading="lazy"></div>
+      <div class="boat-card-image"><img src="/assets/imagenes web/grand-banks-38-eastbay-ex/hf_20260322_060419_71948115-6161-48cb-b2d3-1f30de97800c.jpeg" alt="Grand Banks 38 Eastbay EX" loading="lazy"></div>
       <div class="p-5">
         <div class="flex items-baseline justify-between mb-2">
           <span class="text-[11px] font-light uppercase tracking-[0.18em] text-txt-light-2">Grand Banks · 2002</span>
@@ -257,5 +339,26 @@
   <script>GLightbox({ selector: '.glightbox' });</script>
   <script src="/shared.js"></script>
 
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.hero-slider-track');
+    if (!track) return;
+    const slides = track.children;
+    const total = slides.length;
+    const counter = document.querySelector('.hero-counter');
+    let idx = 0;
+    function go(i) {
+      idx = (i + total) % total;
+      track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+      if (counter) counter.textContent = (idx + 1) + ' / ' + total;
+    }
+    document.querySelector('.hero-arrow--prev')?.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); go(idx - 1); });
+    document.querySelector('.hero-arrow--next')?.addEventListener('click', e => { e.preventDefault(); e.stopPropagation(); go(idx + 1); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'ArrowLeft') go(idx - 1);
+      if (e.key === 'ArrowRight') go(idx + 1);
+    });
+  });
+  </script>
 </body>
 </html>
