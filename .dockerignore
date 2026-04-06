@@ -1,0 +1,37 @@
+# Dev tools (not needed in build or serve)
+node_modules/
+.git/
+.gitignore
+.claude/
+.playwright-mcp/
+claudedocs/
+temporary screenshots/
+
+# Dev-only scripts
+screenshot.mjs
+serve.mjs
+generate-detail-pages.mjs
+
+# Build output (regenerated in Docker build stage)
+dist/
+
+# Legacy files (unused by V1)
+architecture-diagram.html
+boats.json
+shared.js
+styles.css
+
+# Documentation (not needed in image)
+CLAUDE.md
+README.md
+
+# Keep for build stage:
+# build.mjs — runs in stage 1
+# boats.js — data source for build
+# src/ — templates, partials, content, styles
+# package.json — needed for npm install + Node ESM resolution
+# tailwind.config.js — Tailwind CSS configuration
+# index.html — root redirect
+# 404.html — error page
+# assets/ — images
+# nginx.conf — server config

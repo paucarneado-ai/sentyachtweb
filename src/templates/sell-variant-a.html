@@ -1,0 +1,126 @@
+<!-- Sell Your Boat — Variant A: Editorial / Premium Split -->
+
+<!-- ═══ 1. FULL-WIDTH HERO ═══ -->
+<section class="relative flex items-end" style="height: 60vh; min-height: 420px;">
+  <img
+    src="/assets/imagenes%20web/navalia-60/hf_20260324_003017_844a0ce5-ee3a-440c-975b-3be2b4e0c292.jpeg"
+    alt="{{sellTitle}}"
+    class="absolute inset-0 w-full h-full object-cover"
+    loading="eager"
+  >
+  <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10"></div>
+  <div class="absolute inset-0 grain-overlay"></div>
+
+  <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-8 pb-14 lg:pb-20 w-full">
+    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1] text-balance">{{sellTitle}}</h1>
+    <p class="mt-3 text-white/75 text-base lg:text-lg max-w-xl leading-relaxed">{{sellSubtitle}}</p>
+    <p class="mt-5 text-white/60 text-sm leading-relaxed max-w-lg">{{sellIntroText}}</p>
+    <div class="mt-8">
+      <a href="{{sellFinalCTAHref}}" class="btn-primary">{{sellFinalCTAButton}}</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 2. WHY SELL — IMAGE / TEXT SPLIT ═══ -->
+<section class="py-20 lg:py-28 bg-base">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+      <!-- Left: image -->
+      <div class="reveal">
+        <div class="aspect-[4/5] overflow-hidden rounded-sm">
+          <img
+            src="/assets/imagenes%20web/astondoa-72-glx/hf_20260321_025246_1d7f54eb-b8a3-4d8f-8176-4e561b1b4ab1.jpeg"
+            alt="Astondoa 72 GLX cruising"
+            class="w-full h-full object-cover"
+            loading="lazy"
+          >
+        </div>
+      </div>
+
+      <!-- Right: why-points -->
+      <div class="lg:pt-4">
+        <h2 class="font-serif text-2xl lg:text-3xl text-text mb-10 reveal">{{sellWhyTitle}}</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-1 gap-8 reveal" data-delay="100">
+          {{sellWhyPointsHTML}}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 3. PROCESS — VERTICAL TIMELINE ═══ -->
+<section class="py-20 lg:py-28 bg-surface border-y border-border-light">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text text-center mb-14 reveal">{{sellProcessTitle}}</h2>
+    <div class="space-y-10 reveal" data-delay="100">
+      {{sellProcessStepsHTML}}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 4. FULL-WIDTH IMAGE BREAK ═══ -->
+<div class="w-full h-[200px] lg:h-[300px] overflow-hidden">
+  <img
+    src="/assets/imagenes%20web/astondoa-82-glx/hf_20260318_074217_7841eb70-71ec-453e-9df4-3e591d645326.jpeg"
+    alt="Astondoa 82 GLX running shot"
+    class="w-full h-full object-cover object-center"
+    loading="lazy"
+  >
+</div>
+
+<!-- ═══ 5. VALUATION — EDITORIAL TEXT ═══ -->
+<section class="py-20 lg:py-28 bg-surface-alt">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text mb-6 reveal">{{sellValuationTitle}}</h2>
+    <p class="text-text-secondary leading-relaxed reveal" data-delay="100">{{sellValuationText}}</p>
+  </div>
+</section>
+
+<!-- ═══ 6. MARKETING — EDITORIAL TEXT ═══ -->
+<section class="py-20 lg:py-28 bg-base">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text mb-6 reveal">{{sellMarketingTitle}}</h2>
+    <p class="text-text-secondary leading-relaxed reveal" data-delay="100">{{sellMarketingText}}</p>
+  </div>
+</section>
+
+<!-- ═══ 7. DISCRETION — DARK PANEL ═══ -->
+<section class="py-20 lg:py-28 bg-dark relative overflow-hidden">
+  <div class="absolute inset-0 grain-overlay opacity-50"></div>
+  <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-8">
+    <div class="flex gap-6 items-start reveal">
+      <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-sm" style="background: rgba(184, 148, 79, 0.15);">
+        <svg class="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
+        </svg>
+      </div>
+      <div>
+        <h2 class="font-serif text-2xl lg:text-3xl text-white mb-4">{{sellDiscretionTitle}}</h2>
+        <p class="text-white/70 leading-relaxed">{{sellDiscretionText}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 8. FAQ — ACCORDION ═══ -->
+<section class="py-20 lg:py-28 bg-base">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text text-center mb-10 reveal">{{sellFaqTitle}}</h2>
+    <div class="space-y-0 border-t border-border-light">
+      {{sellFaqHTML}}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 9. FINAL CTA ═══ -->
+<section class="py-20 bg-dark relative overflow-hidden">
+  <div class="absolute inset-0 grain-overlay opacity-50"></div>
+  <div class="relative z-10 max-w-2xl mx-auto px-6 lg:px-8 text-center">
+    <h2 class="font-serif text-3xl lg:text-4xl text-white tracking-tight text-balance">{{sellFinalCTATitle}}</h2>
+    <p class="mt-4 text-white/70 leading-relaxed">{{sellFinalCTAText}}</p>
+    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+      <a href="{{sellFinalCTAHref}}" class="btn-primary">{{sellFinalCTAButton}}</a>
+      <a href="{{sellFinalCTAAltHref}}" class="btn-secondary-light">{{sellFinalCTAAlt}}</a>
+    </div>
+  </div>
+</section>

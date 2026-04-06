@@ -1,0 +1,154 @@
+<!-- Contact Page -->
+<div class="pt-20 lg:pt-24"></div>
+
+<!-- ═══ INTRO ═══ -->
+<section class="pt-12 pb-8 bg-base">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h1 class="font-serif text-4xl lg:text-5xl text-text tracking-tight">{{contactPageTitle}}</h1>
+    <p class="mt-3 text-text-secondary text-lg">{{contactPageSubtitle}}</p>
+    <p class="mt-6 text-text-secondary leading-relaxed">{{contactPageIntro}}</p>
+  </div>
+</section>
+
+<!-- ═══ CONTACT INFO + FORM ═══ -->
+<section class="py-12 bg-base">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="grid lg:grid-cols-5 gap-12 lg:gap-16">
+
+      <!-- Left: Contact Details -->
+      <div class="lg:col-span-2">
+        <h2 class="font-serif text-xl text-text mb-6">{{contactInfoTitle}}</h2>
+
+        <!-- Phone -->
+        <div class="flex gap-4 items-start mb-6">
+          <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-accent-light rounded-sm">
+            <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+            </svg>
+          </div>
+          <div>
+            <a href="tel:{{contactPhoneTel}}" class="text-text font-medium hover:text-accent" style="transition: color 0.3s;">{{contactPhone}}</a>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="flex gap-4 items-start mb-6">
+          <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-accent-light rounded-sm">
+            <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+            </svg>
+          </div>
+          <div>
+            <a href="mailto:{{contactEmail}}" class="text-text font-medium hover:text-accent" style="transition: color 0.3s;">{{contactEmail}}</a>
+          </div>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="flex gap-4 items-start mb-8">
+          <div class="w-10 h-10 flex-shrink-0 flex items-center justify-center bg-accent-light rounded-sm">
+            <svg class="w-5 h-5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z"/>
+            </svg>
+          </div>
+          <div>
+            <a href="{{contactWhatsapp}}" target="_blank" rel="noopener" class="text-text font-medium hover:text-accent" style="transition: color 0.3s;">WhatsApp</a>
+          </div>
+        </div>
+
+        <!-- Address -->
+        <div class="border-t border-border-light pt-6 mb-8">
+          <h3 class="font-serif text-lg text-text mb-3">{{contactLocationTitle}}</h3>
+          <p class="text-text-secondary text-sm leading-relaxed">{{contactAddress}}<br>{{contactCity}}</p>
+          <p class="text-text-secondary text-sm leading-relaxed mt-4">{{contactLocationText}}</p>
+        </div>
+
+        <!-- Area of operation -->
+        <div class="border-t border-border-light pt-6">
+          <h3 class="font-serif text-lg text-text mb-3">{{contactAreaTitle}}</h3>
+          <ul class="space-y-2">
+            {{contactAreasHTML}}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="lg:col-span-3">
+        <div class="bg-surface border border-border-light rounded-sm p-8 lg:p-10">
+          <h2 class="font-serif text-xl text-text mb-6">{{contactFormTitle}}</h2>
+
+          <form id="contact-form" class="space-y-5" onsubmit="return handleContactForm(event)">
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="ct-name" class="form-label">{{ctFieldName}}</label>
+                <input type="text" id="ct-name" name="name" required class="form-input">
+              </div>
+              <div>
+                <label for="ct-email" class="form-label">{{ctFieldEmail}}</label>
+                <input type="email" id="ct-email" name="email" required class="form-input">
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-5">
+              <div>
+                <label for="ct-phone" class="form-label">{{ctFieldPhone}}</label>
+                <input type="tel" id="ct-phone" name="phone" class="form-input">
+              </div>
+              <div>
+                <label for="ct-subject" class="form-label">{{ctFieldSubject}}</label>
+                <select id="ct-subject" name="subject" class="filter-select" style="padding: 0.625rem 0.875rem;">
+                  {{contactSubjectOptions}}
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="ct-message" class="form-label">{{ctFieldMessage}}</label>
+              <textarea id="ct-message" name="message" rows="5" required class="form-input" placeholder="{{ctFieldMessagePlaceholder}}"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary w-full justify-center">
+              {{ctFieldSubmit}}
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            </button>
+          </form>
+
+          <div id="contact-form-success" class="hidden mt-6 p-6 bg-accent-light border border-accent/20 rounded-sm text-center">
+            <p class="text-text font-medium">{{contactFormSuccess}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DIRECT CTA ═══ -->
+<section class="py-12 bg-surface-alt border-t border-border-light">
+  <div class="max-w-2xl mx-auto px-6 lg:px-8 text-center">
+    <h2 class="font-serif text-2xl text-text mb-3">{{contactCTATitle}}</h2>
+    <p class="text-text-secondary mb-6">{{contactCTAText}}</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="tel:{{contactPhoneTel}}" class="btn-primary">
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+        {{contactPhone}}
+      </a>
+      <a href="{{contactWhatsapp}}" target="_blank" rel="noopener" class="btn-secondary">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- Contact form handling -->
+<script>
+function handleContactForm(e) {
+  e.preventDefault();
+  var form = document.getElementById('contact-form');
+  var data = new FormData(form);
+  var params = [];
+  data.forEach(function(v, k) { if (v) params.push(k + ': ' + v); });
+  var subject = encodeURIComponent(data.get('subject') || '{{contactEmailSubject}}');
+  var body = encodeURIComponent(params.join('\n'));
+  window.location.href = 'mailto:{{contactEmail}}?subject=' + subject + '&body=' + body;
+  form.classList.add('hidden');
+  document.getElementById('contact-form-success').classList.remove('hidden');
+  return false;
+}
+</script>

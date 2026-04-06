@@ -1,0 +1,239 @@
+<!-- Listings Index: Boats for Sale -->
+<div class="pt-20 lg:pt-24"></div>
+
+<!-- ═══ HEADER ═══ -->
+<section class="pt-12 pb-10 bg-surface-alt border-b border-border-light">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <p class="text-[11px] uppercase tracking-[0.2em] text-text-muted mb-3">SentYacht</p>
+    <h1 class="font-serif text-3xl lg:text-5xl text-text tracking-tight">{{listingsTitle}}</h1>
+    <p class="mt-3 text-text-secondary max-w-2xl" style="font-size: 0.9375rem; line-height: 1.7;">{{listingsSubtitle}}</p>
+  </div>
+</section>
+
+<!-- ═══ FILTER BAR + RESULTS ═══ -->
+<section class="pb-12 bg-base">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <!-- Filter Bar -->
+    <div class="bg-surface border border-border-light rounded-sm p-5 lg:p-6 mb-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <!-- Type -->
+        <div>
+          <label for="filter-type" class="block text-xs uppercase tracking-widest text-text-muted mb-2">{{filterType}}</label>
+          <select id="filter-type" class="filter-select">
+            <option value="">{{filterAll}}</option>
+            <option value="motor">{{filterMotor}}</option>
+            <option value="sail">{{filterSail}}</option>
+          </select>
+        </div>
+        <!-- Length -->
+        <div>
+          <label for="filter-length" class="block text-xs uppercase tracking-widest text-text-muted mb-2">{{filterLength}}</label>
+          <select id="filter-length" class="filter-select">
+            <option value="">{{filterAll}}</option>
+            <option value="0-10">{{filterLengthUnder10}}</option>
+            <option value="10-15">10 — 15 m</option>
+            <option value="15-20">15 — 20 m</option>
+            <option value="20-99">{{filterLengthOver20}}</option>
+          </select>
+        </div>
+        <!-- Year -->
+        <div>
+          <label for="filter-year" class="block text-xs uppercase tracking-widest text-text-muted mb-2">{{filterYear}}</label>
+          <select id="filter-year" class="filter-select">
+            <option value="">{{filterAll}}</option>
+            <option value="2005-2099">2005+</option>
+            <option value="2000-2004">2000 — 2004</option>
+            <option value="1990-1999">1990 — 1999</option>
+            <option value="0-1989">{{filterYearPre1990}}</option>
+          </select>
+        </div>
+        <!-- Sort -->
+        <div>
+          <label for="sort-by" class="block text-xs uppercase tracking-widest text-text-muted mb-2">{{sortLabel}}</label>
+          <select id="sort-by" class="filter-select">
+            <option value="price-desc">{{sortPriceDesc}}</option>
+            <option value="price-asc">{{sortPriceAsc}}</option>
+            <option value="year-desc">{{sortYearDesc}}</option>
+            <option value="year-asc">{{sortYearAsc}}</option>
+            <option value="length-desc">{{sortLengthDesc}}</option>
+            <option value="length-asc">{{sortLengthAsc}}</option>
+          </select>
+        </div>
+      </div>
+      <!-- Hidden fields to keep JS working -->
+      <input type="hidden" id="filter-price" value="">
+      <input type="hidden" id="filter-location" value="">
+    </div>
+
+    <!-- Results count -->
+    <p id="results-count" class="text-sm text-text-muted mb-6"></p>
+
+    <!-- Results Grid -->
+    <div id="listings-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- No results -->
+    <div id="no-results" class="hidden text-center py-16">
+      <p class="text-text-secondary text-lg">{{noResults}}</p>
+      <button onclick="resetFilters()" class="mt-4 btn-secondary">{{resetFilters}}</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ SELLER CROSS-CONVERSION ═══ -->
+<section class="py-16 bg-surface-alt border-y border-border-light">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text">{{sellerCrossTitle}}</h2>
+    <p class="mt-3 text-text-secondary">{{sellerCrossText}}</p>
+    <a href="{{sellerCrossHref}}" class="mt-6 inline-flex btn-primary">
+      {{sellerCrossCTA}}
+      <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ═══ SEO COPY BLOCK ═══ -->
+<section class="py-16 bg-base">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <div class="prose-custom">
+      {{seoCopyHTML}}
+    </div>
+  </div>
+</section>
+
+<!-- Client-side filtering/sorting -->
+<script src="/boats.js"></script>
+<script>
+(function() {
+  const lang = '{{lang}}';
+  const detailBase = lang === 'es' ? '/es/barcos/' : '/en/boats/';
+  const viewLabel = '{{viewDetailsLabel}}';
+  const countTpl = '{{resultsCountTpl}}';
+  const priceConsult = lang === 'es' ? 'Precio a consultar' : 'Price on request';
+
+  function fmtPrice(p) {
+    if (!p) return priceConsult;
+    return lang === 'es'
+      ? new Intl.NumberFormat('es-ES').format(p) + ' \u20AC'
+      : '\u20AC' + new Intl.NumberFormat('en-GB').format(p);
+  }
+
+  function typeLabel(t) {
+    if (lang === 'es') return t === 'motor' ? 'Motor' : 'Velero';
+    return t === 'motor' ? 'Motor' : 'Sailing';
+  }
+
+  function renderCard(boat) {
+    const img = boat.images && boat.images.length ? '/assets/' + boat.images[0] : 'https://placehold.co/800x600';
+    const cabins = boat.cabins ? (boat.cabins + ' cab.') : '';
+    const meta = [boat.year, cabins, boat.location].filter(Boolean).join(' · ');
+    return '<a href="' + detailBase + boat.slug + '/" class="boat-card" aria-label="' + boat.name + '">' +
+      '<div class="boat-card-image"><img src="' + img + '" alt="' + boat.name + ' — ' + boat.year + '" loading="lazy"></div>' +
+      '<div class="p-5 lg:p-6">' +
+        '<div class="flex items-baseline justify-between mb-2">' +
+          '<span class="text-[11px] uppercase tracking-[0.15em] text-text-muted">' + boat.brand + ' · ' + typeLabel(boat.type) + '</span>' +
+          '<span class="text-[11px] text-text-muted">' + boat.length + 'm</span>' +
+        '</div>' +
+        '<h3 class="font-serif text-xl text-text leading-snug mb-1">' + boat.name + '</h3>' +
+        '<p class="text-sm text-text-secondary mb-3">' + meta + '</p>' +
+        '<div class="flex items-center justify-between pt-3 border-t border-border-light">' +
+          '<span class="font-serif text-lg text-accent tracking-tight" style="font-feature-settings:\'tnum\'">' + fmtPrice(boat.price) + '</span>' +
+          '<span class="text-xs text-text-muted flex items-center gap-1">' + viewLabel + ' <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>' +
+        '</div>' +
+      '</div></a>';
+  }
+
+  function applyFilters() {
+    var type = document.getElementById('filter-type').value;
+    var length = document.getElementById('filter-length').value;
+    var price = document.getElementById('filter-price').value;
+    var year = document.getElementById('filter-year').value;
+    var location = document.getElementById('filter-location').value;
+    var sortBy = document.getElementById('sort-by').value;
+
+    var filtered = boats.filter(function(b) {
+      if (type && b.type !== type) return false;
+      if (location && b.location !== location) return false;
+      if (length) { var r = length.split('-').map(Number); if (b.length < r[0] || b.length > r[1]) return false; }
+      if (price) { var r = price.split('-').map(Number); if (b.price < r[0] || b.price > r[1]) return false; }
+      if (year) { var r = year.split('-').map(Number); if (b.year < r[0] || b.year > r[1]) return false; }
+      return true;
+    });
+
+    var parts = sortBy.split('-');
+    var field = parts[0], dir = parts[1];
+    filtered.sort(function(a, b) { return dir === 'asc' ? a[field] - b[field] : b[field] - a[field]; });
+
+    var grid = document.getElementById('listings-grid');
+    var noRes = document.getElementById('no-results');
+    var countEl = document.getElementById('results-count');
+
+    // Mark active filters visually
+    document.querySelectorAll('.filter-select').forEach(function(el) {
+      el.classList.toggle('filter-active', el.value !== '' && el.id !== 'sort-by');
+    });
+
+    if (filtered.length === 0) {
+      grid.innerHTML = '';
+      noRes.classList.remove('hidden');
+      countEl.textContent = '';
+    } else {
+      noRes.classList.add('hidden');
+      grid.innerHTML = filtered.map(renderCard).join('');
+      countEl.textContent = countTpl.replace('{n}', filtered.length);
+    }
+  }
+
+  window.resetFilters = function() {
+    document.getElementById('filter-type').value = '';
+    document.getElementById('filter-length').value = '';
+    document.getElementById('filter-price').value = '';
+    document.getElementById('filter-year').value = '';
+    document.getElementById('filter-location').value = '';
+    document.getElementById('sort-by').value = 'price-desc';
+    applyFilters();
+  };
+
+  document.querySelectorAll('.filter-select').forEach(function(el) {
+    el.addEventListener('change', applyFilters);
+  });
+
+  // ── URL sync ──
+  function readFiltersFromURL() {
+    var params = new URLSearchParams(window.location.search);
+    var type = params.get('type') || params.get('tipo') || '';
+    var length = params.get('length') || '';
+    var year = params.get('year') || '';
+    var sort = params.get('sort') || 'price-desc';
+    if (type) document.getElementById('filter-type').value = type;
+    if (length) document.getElementById('filter-length').value = length;
+    if (year) document.getElementById('filter-year').value = year;
+    if (sort) document.getElementById('sort-by').value = sort;
+  }
+
+  function writeFiltersToURL() {
+    var params = new URLSearchParams();
+    var type = document.getElementById('filter-type').value;
+    var length = document.getElementById('filter-length').value;
+    var year = document.getElementById('filter-year').value;
+    var sort = document.getElementById('sort-by').value;
+    if (type) params.set('type', type);
+    if (length) params.set('length', length);
+    if (year) params.set('year', year);
+    if (sort && sort !== 'price-desc') params.set('sort', sort);
+    var qs = params.toString();
+    var url = window.location.pathname + (qs ? '?' + qs : '');
+    history.replaceState(null, '', url);
+  }
+
+  // Sync URL on every filter change
+  var origApplyFilters = applyFilters;
+  applyFilters = function() { origApplyFilters(); writeFiltersToURL(); };
+
+  readFiltersFromURL();
+  applyFilters();
+})();
+</script>

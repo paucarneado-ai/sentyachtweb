@@ -1,0 +1,34 @@
+<!-- Header / Navigation -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-transparent" style="transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
+    <!-- Logo -->
+    <a href="{{homeHref}}" class="relative z-50">
+      <img src="/assets/logo.png" alt="SentYacht" class="h-6 lg:h-7 nav-logo" style="transition: filter 0.4s;">
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="{{navBuyHref}}" class="nav-link {{navBuyActive}} text-sm font-medium tracking-wide" style="transition: color 0.3s;">{{navBuy}}</a>
+      <a href="{{navSellHref}}" class="nav-link {{navSellActive}} text-sm font-medium tracking-wide" style="transition: color 0.3s;">{{navSell}}</a>
+      <a href="{{navAboutHref}}" class="nav-link {{navAboutActive}} text-sm font-medium tracking-wide" style="transition: color 0.3s;">{{navAbout}}</a>
+      <a href="{{navContactHref}}" class="nav-link {{navContactActive}} text-sm font-medium tracking-wide" style="transition: color 0.3s;">{{navContact}}</a>
+      <a href="{{langAltHref}}" class="lang-switch text-xs font-medium tracking-widest border rounded-sm px-2 py-1" style="transition: color 0.3s, border-color 0.3s;">{{langAlt}}</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="lg:hidden relative z-50 flex flex-col justify-center gap-[5px] w-8 h-8" aria-label="Menu" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="mobile-menu">
+  <a href="{{navBuyHref}}">{{navBuy}}</a>
+  <a href="{{navSellHref}}">{{navSell}}</a>
+  <a href="{{navAboutHref}}">{{navAbout}}</a>
+  <a href="{{navContactHref}}">{{navContact}}</a>
+  <a href="{{langAltHref}}" class="text-lg text-text-muted">{{langAlt}}</a>
+</div>

@@ -1,0 +1,83 @@
+<!-- About SentYacht — Identity & Trust Page -->
+
+<!-- ═══ 1. TYPOGRAPHIC HEADER (no hero image) ═══ -->
+<section class="pt-28 lg:pt-36 pb-12 lg:pb-16 bg-base">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <p class="text-xs tracking-[0.2em] uppercase text-gold mb-4 reveal">{{aboutLocationLabel}}</p>
+    <h1 class="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] text-text tracking-tight leading-[1.08] text-balance reveal" data-delay="60">{{aboutTitle}}</h1>
+    <div class="mt-6 w-16 h-px bg-gold reveal" data-delay="120"></div>
+    <p class="mt-6 text-text-secondary leading-relaxed max-w-2xl reveal" data-delay="180">{{aboutBrandStatement}}</p>
+  </div>
+</section>
+
+<!-- ═══ 2. FOUNDER ═══ -->
+<section class="py-10 lg:py-14 bg-surface border-y border-border-light">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 reveal">
+    <p class="text-xs tracking-[0.2em] uppercase text-gold mb-4">{{aboutFounderLabel}}</p>
+    <h2 class="font-serif text-2xl lg:text-3xl text-text mb-5">{{aboutFounderName}}</h2>
+    {{aboutFounderText}}
+  </div>
+</section>
+
+<!-- ═══ 3. PHILOSOPHY ═══ -->
+<section class="py-10 lg:py-14 bg-base">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 reveal">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text mb-5">{{aboutPhilosophyTitle}}</h2>
+    <p class="text-text-secondary leading-relaxed">{{aboutPhilosophyText}}</p>
+  </div>
+</section>
+
+<!-- ═══ 4. PLACE IMAGE (El Masnou / Mediterranean coast) ═══ -->
+<section class="relative overflow-hidden" style="height: 360px;" aria-hidden="true">
+  {{aboutPlaceImage}}
+  <div class="absolute inset-0" style="background: linear-gradient(to bottom, var(--color-base) 0%, transparent 30%, transparent 70%, var(--color-surface-alt) 100%); opacity: 0.4;"></div>
+</section>
+
+<!-- ═══ 5. MEDITERRANEAN IDENTITY ═══ -->
+<section class="py-10 lg:py-14 bg-surface-alt">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 reveal">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text mb-5">{{aboutMedTitle}}</h2>
+    <p class="text-text-secondary leading-relaxed">{{aboutMedText}}</p>
+  </div>
+</section>
+
+<!-- ═══ 6. HOW WE WORK (editorial, no cards) ═══ -->
+<section class="py-14 lg:py-20 bg-surface border-y border-border-light">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text mb-10 reveal">{{aboutHowTitle}}</h2>
+    <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
+      <div class="reveal" data-delay="0">
+        <p class="text-xs tracking-[0.2em] uppercase text-accent mb-3">{{aboutHowBuyersLabel}}</p>
+        <p class="text-text-secondary text-sm leading-relaxed">{{aboutHowBuyersText}}</p>
+      </div>
+      <div class="reveal" data-delay="80">
+        <p class="text-xs tracking-[0.2em] uppercase text-gold mb-3">{{aboutHowSellersLabel}}</p>
+        <p class="text-text-secondary text-sm leading-relaxed">{{aboutHowSellersText}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 7. VALUES (editorial, no gold-border cards) ═══ -->
+<section class="py-14 lg:py-20 bg-base">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text mb-12 reveal">{{aboutValuesTitle}}</h2>
+    <div class="grid md:grid-cols-2 gap-x-16 gap-y-10">
+      {{aboutValuesHTML}}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 8. FINAL CTA (light, not dark — differentiates from Sell page) ═══ -->
+<section class="py-14 lg:py-20 bg-base">
+  <div class="max-w-2xl mx-auto px-6 lg:px-8 text-center">
+    <div class="border-t-2 border-gold/30 pt-10 lg:pt-14">
+      <h2 class="font-serif text-3xl lg:text-4xl text-text tracking-tight text-balance">{{aboutCTATitle}}</h2>
+      <p class="mt-4 text-text-secondary">{{aboutCTAText}}</p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+        <a href="{{aboutCTAHref}}" class="btn-primary">{{aboutCTAButton}}</a>
+        <a href="{{aboutCTAAltHref}}" class="btn-secondary">{{aboutCTAAlt}}</a>
+      </div>
+    </div>
+  </div>
+</section>

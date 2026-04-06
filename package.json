@@ -4,6 +4,11 @@
   "description": "",
   "main": "boats.js",
   "scripts": {
+    "build:images": "node scripts/optimize-images.mjs",
+    "build:html": "node build.mjs",
+    "build:css": "npx tailwindcss -i src/styles/tailwind-input.css -o dist/styles/tailwind.css --minify",
+    "build": "node scripts/optimize-images.mjs && node build.mjs && npx tailwindcss -i src/styles/tailwind-input.css -o dist/styles/tailwind.css --minify",
+    "dev:css": "npx tailwindcss -i src/styles/tailwind-input.css -o dist/styles/tailwind.css --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,5 +17,9 @@
   "type": "commonjs",
   "dependencies": {
     "puppeteer": "^24.39.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5",
+    "tailwindcss": "^3.4.17"
   }
 }

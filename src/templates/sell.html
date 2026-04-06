@@ -1,0 +1,87 @@
+<!-- Sell Your Boat Page -->
+<div class="pt-20 lg:pt-24"></div>
+
+<!-- ═══ INTRO ═══ -->
+<section class="pt-12 pb-16 bg-base">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h1 class="font-serif text-4xl lg:text-5xl text-text tracking-tight text-balance">{{sellTitle}}</h1>
+    <p class="mt-3 text-text-secondary text-lg">{{sellSubtitle}}</p>
+    <p class="mt-6 text-text-secondary leading-relaxed">{{sellIntroText}}</p>
+  </div>
+</section>
+
+<!-- ═══ WHY SELL WITH SENTYACHT ═══ -->
+<section class="py-16 bg-surface border-y border-border-light">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text text-center mb-12 reveal">{{sellWhyTitle}}</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{sellWhyPointsHTML}}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section class="py-16 bg-base">
+  <div class="max-w-4xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text text-center mb-12 reveal">{{sellProcessTitle}}</h2>
+    <div class="space-y-8">
+      {{sellProcessStepsHTML}}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VALUATION LOGIC ═══ -->
+<section class="py-16 bg-surface-alt">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text mb-6 reveal">{{sellValuationTitle}}</h2>
+    <p class="text-text-secondary leading-relaxed reveal">{{sellValuationText}}</p>
+  </div>
+</section>
+
+<!-- ═══ MARKETING / PRESENTATION ═══ -->
+<section class="py-16 bg-base">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text mb-6 reveal">{{sellMarketingTitle}}</h2>
+    <p class="text-text-secondary leading-relaxed reveal">{{sellMarketingText}}</p>
+  </div>
+</section>
+
+<!-- ═══ DISCRETION ═══ -->
+<section class="py-16 bg-surface border-y border-border-light">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <div class="flex gap-6 items-start reveal">
+      <div class="w-12 h-12 flex-shrink-0 flex items-center justify-center bg-gold-light rounded-sm">
+        <svg class="w-6 h-6 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
+        </svg>
+      </div>
+      <div>
+        <h2 class="font-serif text-2xl lg:text-3xl text-text mb-4">{{sellDiscretionTitle}}</h2>
+        <p class="text-text-secondary leading-relaxed">{{sellDiscretionText}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="py-16 bg-base">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text text-center mb-10 reveal">{{sellFaqTitle}}</h2>
+    <div class="space-y-0 border-t border-border-light">
+      {{sellFaqHTML}}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FINAL CTA ═══ -->
+<section class="py-20 bg-dark relative overflow-hidden">
+  <div class="absolute inset-0 grain-overlay opacity-50"></div>
+  <div class="relative z-10 max-w-2xl mx-auto px-6 lg:px-8 text-center">
+    <h2 class="font-serif text-3xl lg:text-4xl text-white tracking-tight text-balance">{{sellFinalCTATitle}}</h2>
+    <p class="mt-4 text-white/70 leading-relaxed">{{sellFinalCTAText}}</p>
+    <div class="mt-8 flex flex-col sm:flex-row justify-center gap-4">
+      <a href="{{sellFinalCTAHref}}" class="btn-primary">{{sellFinalCTAButton}}</a>
+      <a href="{{sellFinalCTAAltHref}}" class="btn-secondary-light">{{sellFinalCTAAlt}}</a>
+    </div>
+  </div>
+</section>

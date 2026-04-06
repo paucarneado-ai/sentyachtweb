@@ -1,0 +1,29 @@
+<!-- Legal Page -->
+<div class="pt-20 lg:pt-24"></div>
+
+<!-- Breadcrumb -->
+<div class="bg-base border-b border-border-light">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 py-3">
+    <nav class="text-xs text-text-muted" aria-label="Breadcrumb">
+      <a href="{{homeHref}}" class="hover:text-accent" style="transition: color 0.3s;">{{legalBreadcrumbHome}}</a>
+      <span class="mx-2">/</span>
+      <span class="text-text-secondary">{{legalPageName}}</span>
+    </nav>
+  </div>
+</div>
+
+<!-- Header -->
+<section class="pt-10 pb-6 bg-base">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h1 class="font-serif text-3xl lg:text-4xl text-text tracking-tight">{{legalPageName}}</h1>
+  </div>
+</section>
+
+<!-- Legal Content -->
+<section class="pb-16 bg-base">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <div class="legal-prose">
+      {{legalBodyHTML}}
+    </div>
+  </div>
+</section>

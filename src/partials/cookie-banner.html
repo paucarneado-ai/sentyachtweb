@@ -1,0 +1,13 @@
+<!-- Cookie Banner -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="text-sm text-text-secondary">
+      {{cookieText}}
+      <a href="{{cookieMoreHref}}" class="underline hover:text-accent" style="transition: color 0.3s;">{{cookieMore}}</a>
+    </p>
+    <div class="flex gap-3">
+      <button id="cookie-reject" class="text-sm text-text-muted hover:text-text-secondary px-4 py-2" style="transition: color 0.3s;">{{cookieReject}}</button>
+      <button id="cookie-accept" class="btn-primary text-sm py-2 px-5">{{cookieAccept}}</button>
+    </div>
+  </div>
+</div>

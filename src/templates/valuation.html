@@ -1,0 +1,175 @@
+<!-- Confidential Valuation Page — Final Production -->
+<style>
+  .val-hero { height: 45vh; min-height: 340px; max-height: 500px; }
+  .val-factors-grid > div {
+    background: var(--color-surface);
+    border-left: 4px solid var(--color-gold);
+    padding: 1.25rem 1.5rem;
+    border-radius: 2px;
+    box-shadow: var(--shadow-sm);
+  }
+  .val-factors-grid > div h3 { font-weight: 500; }
+</style>
+
+<!-- ═══ 1. HERO ═══ -->
+<section class="relative flex items-end val-hero">
+  <img
+    src="/assets/imagenes%20web/navalia-60/hf_20260324_003017_844a0ce5-ee3a-440c-975b-3be2b4e0c292.jpeg"
+    alt="{{valTitle}}"
+    class="absolute inset-0 w-full h-full object-cover"
+    loading="eager"
+  >
+  <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/5"></div>
+  <div class="absolute inset-0 grain-overlay opacity-25"></div>
+
+  <div class="relative z-10 w-full pb-10 lg:pb-14">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+      <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-[1.1] text-balance">{{valTitle}}</h1>
+      <p class="mt-3 text-white/80 text-base lg:text-lg max-w-xl mx-auto leading-relaxed">{{valSubtitle}}</p>
+      <div class="mt-7">
+        <a href="#valuation-form" class="btn-primary">{{valFieldSubmit}}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 2. INTRO ═══ -->
+<section class="py-10 lg:py-12 bg-base">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <p class="text-text-secondary leading-relaxed text-base lg:text-lg reveal">{{valIntroText}}</p>
+  </div>
+</section>
+
+<!-- ═══ 3. WHY REQUEST A VALUATION ═══ -->
+<section class="py-10 lg:py-14 bg-surface border-y border-border-light">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text mb-8 reveal">{{valWhyTitle}}</h2>
+    <ul class="space-y-4">
+      {{valWhyPointsHTML}}
+    </ul>
+  </div>
+</section>
+
+<!-- ═══ 4. WHAT AFFECTS VALUE ═══ -->
+<section class="py-10 lg:py-14 bg-surface-alt">
+  <div class="max-w-5xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text text-center mb-8 reveal">{{valFactorsTitle}}</h2>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 val-factors-grid">
+      {{valFactorsHTML}}
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 5. VALUATION FORM ═══ -->
+<section id="valuation-form" class="py-10 lg:py-14 bg-surface border-y border-border-light">
+  <div class="max-w-2xl mx-auto px-6 lg:px-8">
+    <h2 class="font-serif text-2xl lg:text-3xl text-text mb-2 reveal">{{valFormTitle}}</h2>
+    <p class="text-text-secondary mb-8 reveal" data-delay="40">{{valFormIntro}}</p>
+
+    <div class="flex flex-wrap gap-x-6 gap-y-2 mb-6 py-4 border-y border-border-light text-sm text-text-secondary">
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>{{valConfidenceFree}}</span>
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>{{valConfidenceTime}}</span>
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/></svg>{{valConfidencePrivate}}</span>
+    </div>
+
+    <form id="val-form-el" class="space-y-5" onsubmit="return handleValuationForm(event)">
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="val-name" class="form-label">{{valFieldName}}</label>
+          <input type="text" id="val-name" name="name" required class="form-input">
+        </div>
+        <div>
+          <label for="val-email" class="form-label">{{valFieldEmail}}</label>
+          <input type="email" id="val-email" name="email" required class="form-input">
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div>
+          <label for="val-phone" class="form-label">{{valFieldPhone}}</label>
+          <input type="tel" id="val-phone" name="phone" class="form-input">
+        </div>
+        <div>
+          <label for="val-make" class="form-label">{{valFieldMakeModel}}</label>
+          <input type="text" id="val-make" name="makeModel" required class="form-input">
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-3 gap-5">
+        <div>
+          <label for="val-year" class="form-label">{{valFieldYear}}</label>
+          <input type="number" id="val-year" name="year" min="1950" max="2026" class="form-input">
+        </div>
+        <div>
+          <label for="val-length" class="form-label">{{valFieldLength}}</label>
+          <input type="text" id="val-length" name="length" class="form-input">
+        </div>
+        <div>
+          <label for="val-location" class="form-label">{{valFieldLocation}}</label>
+          <input type="text" id="val-location" name="location" class="form-input">
+        </div>
+      </div>
+
+      <div>
+        <label for="val-condition" class="form-label">{{valFieldCondition}}</label>
+        <textarea id="val-condition" name="condition" rows="4" class="form-input" placeholder="{{valFieldConditionPlaceholder}}"></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary w-full justify-center">
+        {{valFieldSubmit}}
+        <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+      </button>
+    </form>
+
+    <!-- Success message -->
+    <div id="form-success" class="hidden mt-6 p-6 bg-accent-light border border-accent/20 rounded-sm text-center">
+      <p class="text-text font-medium">{{valFormSuccessTitle}}</p>
+      <p class="text-text-secondary text-sm mt-2">{{valFormSuccessText}}</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 6. CONFIDENTIALITY ═══ -->
+<section class="py-10 lg:py-14 bg-dark relative overflow-hidden">
+  <div class="absolute inset-0 grain-overlay opacity-40"></div>
+  <div class="relative z-10 max-w-3xl mx-auto px-6 lg:px-8 border-t-2 border-[#B8944F]/30 pt-10 lg:pt-14">
+    <div class="flex gap-5 items-start reveal">
+      <div class="w-11 h-11 flex-shrink-0 flex items-center justify-center rounded-sm mt-0.5" style="background: rgba(184, 148, 79, 0.2);">
+        <svg class="w-5 h-5 text-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+        </svg>
+      </div>
+      <div>
+        <h2 class="font-serif text-2xl lg:text-3xl text-white mb-3">{{valConfTitle}}</h2>
+        <p class="text-white/70 leading-relaxed">{{valConfText}}</p>
+        <p class="text-white/40 text-sm mt-4 italic">{{valDisclaimer}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 7. CROSS-LINK TO SELL PAGE ═══ -->
+<section class="py-10 lg:py-12 bg-surface-alt border-t border-border-light">
+  <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+    <h3 class="font-serif text-xl lg:text-2xl text-text mb-2 reveal">{{valCrossTitle}}</h3>
+    <p class="text-text-secondary text-sm mb-5 reveal" data-delay="40">{{valCrossText}}</p>
+    <a href="{{valCrossHref}}" class="inline-flex btn-secondary">{{valCrossCTA}}</a>
+  </div>
+</section>
+
+<!-- Form handling -->
+<script>
+function handleValuationForm(e) {
+  e.preventDefault();
+  var form = document.getElementById('val-form-el');
+  var data = new FormData(form);
+  var params = [];
+  data.forEach(function(v, k) { if (v) params.push(k + ': ' + v); });
+  var subject = encodeURIComponent('{{valEmailSubject}}');
+  var body = encodeURIComponent(params.join('\n'));
+  window.location.href = 'mailto:{{contactEmail}}?subject=' + subject + '&body=' + body;
+  form.classList.add('hidden');
+  document.getElementById('form-success').classList.remove('hidden');
+  return false;
+}
+</script>
