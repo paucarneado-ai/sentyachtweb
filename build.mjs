@@ -628,6 +628,15 @@ function buildPage(templateName, outputPath, vars) {
   console.log(`  \u2713 ${outputPath}`);
 }
 
+function buildStandalonePage(templateName, outputPath, vars) {
+  const template = readTemplate(templateName);
+  let page = compile(template, vars);
+  const fullPath = join(ROOT, outputPath);
+  ensureDir(fullPath);
+  writeFileSync(fullPath, page, 'utf-8');
+  console.log(`  \u2713 ${outputPath}`);
+}
+
 // ─── Main ───
 console.log('\nSentYacht Build\n' + '='.repeat(40));
 
@@ -1459,6 +1468,78 @@ for (const lang of ['es', 'en']) {
     };
     buildPage('legal.html', `${lang}/${legalPage.slug}/index.html`, legalVars);
   }
+}
+
+// ─── Landing Page (Meta Ads) — Spanish only, standalone ───
+console.log('\n[LANDING]');
+{
+  const lang = 'es';
+  const c = copy[lang];
+
+  // Generate boat cards for landing page (all boats, with WhatsApp CTA + type filter attribute)
+  const landingBoatCards = boats.map((boat, i) => {
+    const detailHref = `/es/barcos/${boat.slug}/`;
+    const price = formatPrice(boat.price);
+    const typeLabel = boat.type === 'motor' ? 'Motor' : 'Velero';
+    const filterType = boat.type === 'motor' ? 'motor' : 'sail';
+    const cardImg = boat.images && boat.images.length
+      ? `<img src="${encodeImgPath(boat.images[0])}" alt="${boat.name} — ${boat.year}" loading="${i < 3 ? 'eager' : 'lazy'}">`
+      : '<img src="https://placehold.co/800x600" alt="No image">';
+    const waMsg = encodeURIComponent(`Hola, me interesa el ${boat.name} (${boat.year}) que he visto en su web.`);
+
+    // Badge logic — premium understated style
+    let badgeHTML = '';
+    if (boat.location && boat.location.toLowerCase().includes('masnou')) {
+      badgeHTML = '<span class="landing-badge">Visitable en El Masnou</span>';
+    } else if (boat.featured) {
+      badgeHTML = '<span class="landing-badge">Selecci\u00f3n SentYacht</span>';
+    }
+
+    const card = `
+      <div class="boat-card reveal" data-delay="${i * 80}" data-boat-type="${filterType}" style="position:relative;">
+        <div class="boat-card-image block relative">
+          <a href="${detailHref}">
+            ${cardImg}
+          </a>
+          ${badgeHTML}
+          <a href="https://wa.me/34609865215?text=${waMsg}" target="_blank" rel="noopener" class="landing-card-wa" aria-label="WhatsApp" onclick="event.stopPropagation();">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.616l4.584-1.468A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.37 0-4.567-.696-6.42-1.888l-.15-.096-3.058.978.998-2.98-.108-.16A9.935 9.935 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          </a>
+        </div>
+        <a href="${detailHref}" class="block p-5 lg:p-6">
+          <div class="flex items-baseline justify-between mb-2">
+            <span class="text-[11px] uppercase tracking-[0.15em] text-text-muted">${boat.brand} · ${typeLabel}</span>
+            <span class="text-[11px] text-text-muted">${boat.length}m</span>
+          </div>
+          <h3 class="font-serif text-xl text-text leading-snug mb-1">${boat.name}</h3>
+          <p class="text-sm text-text-secondary mb-3">${boat.year} · ${boat.cabins || '—'} cab. · ${boat.location}</p>
+          <div class="flex items-center justify-between pt-3 border-t border-border-light">
+            <span class="font-serif text-lg text-accent tracking-tight" style="font-feature-settings: 'tnum';">${price}</span>
+            <span class="text-xs text-text-muted flex items-center gap-1">Ver detalles <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+      </div>`;
+
+    return card;
+  }).join('\n');
+
+  const shared = getSharedVars(lang);
+  const landingVars = {
+    ...shared,
+    pageTitle: 'Yates y Embarcaciones en Venta — SentYacht',
+    pageDescription: 'Yates seleccionados a motor y vela en Barcelona y costa mediterranea. Trato directo con el broker desde El Masnou.',
+    ogImage: 'https://sentyacht.com/assets/landing-hero-3.jpeg',
+    headExtra: '<link rel="preload" as="image" href="/assets/landing-hero-3.jpeg">',
+    totalBoats: String(boats.length),
+    boatCardsHTML: landingBoatCards,
+    motorBoatOptions: boats.filter(b => b.type === 'motor').map(b => `<option value="${b.name} (${b.year})">${b.name} (${b.year})</option>`).join('\n          '),
+    sailBoatOptions: boats.filter(b => b.type === 'sail').map(b => `<option value="${b.name} (${b.year})">${b.name} (${b.year})</option>`).join('\n          '),
+  };
+
+  buildStandalonePage('landing.html', 'es/landing/index.html', landingVars);
+
+  // Thank-you page (fully static, no vars needed beyond cookie)
+  buildStandalonePage('landing-gracias.html', 'es/landing/gracias/index.html', {});
 }
 
 // ─── Generate sitemap.xml ───
