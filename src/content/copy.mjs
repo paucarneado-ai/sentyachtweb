@@ -12,7 +12,7 @@ export default {
     siteName: 'SentYacht',
 
     nav: {
-      buy: 'Comprar',
+      buy: 'Embarcaciones',
       sell: 'Vender',
       valuation: 'Valoración',
       about: 'Nosotros',
@@ -55,7 +55,7 @@ export default {
     trust: {
       title: 'Por qué SentYacht',
       points: [
-        { label: 'Trato directo', desc: 'Jordi Senties gestiona cada operación personalmente. Un teléfono, una persona, en cada paso.' },
+        { label: 'Trato directo', desc: 'Jordi Sentíes gestiona cada operación personalmente. Un teléfono, una persona, en cada paso.' },
         { label: 'Selección con criterio', desc: 'Cada embarcación inspeccionada en puerto antes de aceptar representarla. Rechazamos barcos que no podemos presentar con confianza.' },
         { label: 'Discreción', desc: 'Mandatos off-market disponibles. Su embarcación se muestra solo a compradores que usted autorice.' },
         { label: 'Puerto de El Masnou', desc: 'Base en el Puerto Deportivo de El Masnou, a 20 minutos de Barcelona. Operamos en el Maresme, Costa Brava y Baleares.' },
@@ -302,8 +302,8 @@ export default {
       brandStatement: 'SentYacht es un servicio de brokerage náutico con base en El Masnou, respaldado por 50 años de experiencia en el sector. No somos un portal de anuncios ni un grupo internacional. Trabajamos con un número limitado de embarcaciones, seleccionadas con criterio, para ofrecer trato directo, proceso controlado y conocimiento real de lo que vendemos.',
 
       founderLabel: 'Detrás de SentYacht',
-      founderName: 'Jordi Senties',
-      founderText: '<p class="text-text-secondary leading-relaxed mb-5">Jordi Senties lleva en el sector náutico desde enero de 1976. Empezó en Talleres Náutic, adquirió su primera empresa —Ibermar Marina S.A.— y trabajó como broker en Marina Masnou. En 1982 se incorporó a Astilleros Astondoa, donde llegó a ser Director Comercial Internacional de uno de los astilleros más prestigiosos de España. Fue durante esa etapa cuando creó Sent-Yacht, que incluía su propio varadero.</p><p class="text-text-secondary leading-relaxed mb-5">Su conocimiento del sector viene de haberlo vivido desde dentro: taller, varadero, astillero, dirección comercial y venta directa. Ha trabajado con constructores como Astondoa, Pershing, Antago, Ferretti y Maiora. No es un intermediario que consulta catálogos; es alguien que conoce las embarcaciones, sus astilleros y su mercado por experiencia directa.</p><p class="text-text-secondary leading-relaxed">Jordi fue presidente de FADIN (Federación de Empresarios de Industrias, Comercio y Servicios Náutico-Marítimos) y de ADIN (Associació d\'Indústries Comerç i Serveis Nàutics) durante 8 años cada una. Hoy gestiona cada operación personalmente desde El Masnou. Un teléfono, un interlocutor, cada paso del camino.</p>',
+      founderName: 'Jordi Sentíes',
+      founderText: '<p class="text-text-secondary leading-relaxed mb-5">Jordi Sentíes lleva en el sector náutico desde enero de 1976. Empezó en Talleres Náutic, adquirió su primera empresa —Ibermar Marina S.A.— y trabajó como broker en Marina Masnou. En 1982 se incorporó a Astilleros Astondoa, donde llegó a ser Director Comercial Internacional de uno de los astilleros más prestigiosos de España. Fue durante esa etapa cuando creó Sent-Yacht, que incluía su propio varadero.</p><p class="text-text-secondary leading-relaxed mb-5">Su conocimiento del sector viene de haberlo vivido desde dentro: taller, varadero, astillero, dirección comercial y venta directa. Ha trabajado con constructores como Astondoa, Pershing, Antago, Ferretti y Maiora. No es un intermediario que consulta catálogos; es alguien que conoce las embarcaciones, sus astilleros y su mercado por experiencia directa.</p><p class="text-text-secondary leading-relaxed">Jordi fue presidente de FADIN (Federación de Empresarios de Industrias, Comercio y Servicios Náutico-Marítimos) y de ADIN (Associació d\'Indústries Comerç i Serveis Nàutics) durante 8 años cada una. Hoy gestiona cada operación personalmente desde El Masnou. Un teléfono, un interlocutor, cada paso del camino.</p>',
 
       philosophyTitle: 'Por qué un número limitado de barcos',
       philosophyText: 'Hay un dicho catalán: <em>al pot petit hi ha la bona confitura</em> — en el bote pequeño está la buena mermelada. Podríamos gestionar más barcos. Elegimos no hacerlo. Un catálogo limitado permite dedicar más tiempo a cada embarcación: valoración fundamentada, fotografía cuidada, descripción honesta y seguimiento real de cada visita y cada oferta. Para el propietario, eso significa una venta mejor gestionada. Para el comprador, información en la que puede confiar.',
@@ -389,7 +389,7 @@ export default {
     siteName: 'SentYacht',
 
     nav: {
-      buy: 'Buy',
+      buy: 'Boats',
       sell: 'Sell',
       valuation: 'Valuation',
       about: 'About',
@@ -432,7 +432,7 @@ export default {
     trust: {
       title: 'Why SentYacht',
       points: [
-        { label: 'Direct service', desc: 'Jordi Senties manages every sale personally. One phone number, one person, every step of the way.' },
+        { label: 'Direct service', desc: 'Jordi Sentíes manages every sale personally. One phone number, one person, every step of the way.' },
         { label: 'Curated selection', desc: 'Every boat inspected in port before we agree to represent it. We decline boats we cannot present with confidence.' },
         { label: 'Discretion', desc: 'Off-market mandates available. Your boat is shown only to buyers you authorise.' },
         { label: 'El Masnou Marina', desc: 'Based at El Masnou Marina, 20 minutes from Barcelona. Operating across the Maresme, Costa Brava and the Balearics.' },
@@ -679,8 +679,8 @@ export default {
       brandStatement: 'SentYacht is a yacht brokerage based in El Masnou, backed by 50 years of experience in the nautical industry. We are not a listings portal or an international group. We work with a limited number of boats, selected with care, to offer direct treatment, a controlled sales process and real knowledge of what we sell.',
 
       founderLabel: 'Behind SentYacht',
-      founderName: 'Jordi Senties',
-      founderText: '<p class="text-text-secondary leading-relaxed mb-5">Jordi Senties has been in the nautical industry since January 1976. He started at Talleres Nautic, went on to acquire his first company — Ibermar Marina S.A. — and worked as a broker at Marina Masnou. In 1982 he joined Astilleros Astondoa, one of Spain\'s most prestigious shipyards, where he became International Commercial Director. It was during that period that he created Sent-Yacht, which included its own boatyard.</p><p class="text-text-secondary leading-relaxed mb-5">His knowledge of the sector comes from having lived it from the inside: workshop, boatyard, shipyard, commercial directorship and direct sales. He has worked with builders such as Astondoa, Pershing, Antago, Ferretti and Maiora. He is not a middleman who consults catalogues; he knows the vessels, their builders and their market through direct experience.</p><p class="text-text-secondary leading-relaxed">Jordi served as president of FADIN (the Spanish Federation of Nautical Industries, Commerce and Services) and ADIN (the Catalan Association of Nautical Industries, Commerce and Services) for eight years each. Today he manages every operation personally from El Masnou. One phone number, one contact, every step of the way.</p>',
+      founderName: 'Jordi Sentíes',
+      founderText: '<p class="text-text-secondary leading-relaxed mb-5">Jordi Sentíes has been in the nautical industry since January 1976. He started at Talleres Nautic, went on to acquire his first company — Ibermar Marina S.A. — and worked as a broker at Marina Masnou. In 1982 he joined Astilleros Astondoa, one of Spain\'s most prestigious shipyards, where he became International Commercial Director. It was during that period that he created Sent-Yacht, which included its own boatyard.</p><p class="text-text-secondary leading-relaxed mb-5">His knowledge of the sector comes from having lived it from the inside: workshop, boatyard, shipyard, commercial directorship and direct sales. He has worked with builders such as Astondoa, Pershing, Antago, Ferretti and Maiora. He is not a middleman who consults catalogues; he knows the vessels, their builders and their market through direct experience.</p><p class="text-text-secondary leading-relaxed">Jordi served as president of FADIN (the Spanish Federation of Nautical Industries, Commerce and Services) and ADIN (the Catalan Association of Nautical Industries, Commerce and Services) for eight years each. Today he manages every operation personally from El Masnou. One phone number, one contact, every step of the way.</p>',
 
       philosophyTitle: 'Why a limited number of boats',
       philosophyText: 'There is a Catalan saying: <em>al pot petit hi ha la bona confitura</em> — in a small pot you find the best jam. We could manage more boats. We choose not to. A limited catalogue means more time per vessel: a well-founded valuation, careful photography, an honest description, and real follow-up on every viewing and every offer. For the owner, that means a better-managed sale. For the buyer, information you can trust.',

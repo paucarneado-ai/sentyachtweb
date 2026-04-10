@@ -23,18 +23,18 @@ const boats = [
     berths: 8,
     heads: 8,
     description: {
-      es: "Astondoa 82 GLX construido por encargo en 2006. Un solo propietario desde su botadura.\n\nCinco cabinas, gran salón-comedor con mesa de cristal y sofás retapizados, cocina a medida. Flybridge de grandes dimensiones con techo y toldo extensible, jacuzzi con agua caliente y de mar, cinco zonas de estar independientes.\n\nPlataforma de baño hidráulica de 2,40 m, nueva pasarela, puerta de acceso eléctrica. Parquet especial en toda la embarcación. Decoración interior moderna y exclusiva, teca en muy buen estado. Barandillas de acero inoxidable en flybridge, alarma y cámaras de seguridad, sistema de música especial.\n\nEstabilizadores de alta gama con Seakeeper, potabilizadora de gran capacidad. Motores MTU revisados, generadores con revisión de 5.000 horas realizada. Nueva radiobaliza EPIRB y balsa salvavidas. Lista 6 e impuestos pagados. Pintado completo en 2018.\n\nNumerosas renovaciones recientes: nuevas bombas de agua y aire acondicionado, hidráulicos de plataforma renovados, nueva pasarela, nuevo calentador de agua, nuevas tuberías y depósito de aguas negras, baterías nuevas, instalación eléctrica y cargadores nuevos, nuevas bombas de sentina.",
-      en: "Astondoa 82 GLX custom built in 2006. Single owner since launch.\n\nFive cabins, large salon-dining room with crystal table and reupholstered sofas, custom galley. Large flybridge with roof and extendable awning, jacuzzi with hot water and seawater, five independent seating zones.\n\n2.40m hydraulic swim platform, new gangway, electric access door. Special parquet throughout. Modern exclusive interior decor, teak in very good condition. Stainless steel railings on flybridge, alarm and security cameras, special music system.\n\nHigh-end stabilizers with Seakeeper, large capacity watermaker. MTU engines serviced, generators with 5,000h revision completed. New EPIRB and life raft. Lista 6 and taxes paid. Fully painted in 2018.\n\nNumerous recent renovations: new water and AC pumps, renewed platform hydraulics, new gangway, new water heater, new black water pipes and tank, new batteries, new electrical installation and chargers, new bilge pumps."
+      es: "Astondoa 82 GLX construido por encargo. Un solo propietario desde su botadura.\n\nCinco cabinas, gran salón-comedor con mesa de cristal y sofás retapizados, cocina a medida. Flybridge de grandes dimensiones con techo y toldo extensible, jacuzzi con agua caliente y de mar, cinco zonas de estar independientes.\n\nPlataforma de baño hidráulica de 2,40 m, nueva pasarela, puerta de acceso eléctrica. Parquet especial en toda la embarcación. Decoración interior moderna y exclusiva, teca en muy buen estado. Barandillas de acero inoxidable en flybridge, alarma y cámaras de seguridad, sistema de música especial.\n\nEstabilizadores de alta gama con Seakeeper, potabilizadora de gran capacidad. Motores MTU revisados, generadores con revisión de 5.000 horas realizada. Nueva radiobaliza EPIRB y balsa salvavidas. Lista 6 e impuestos pagados. Pintado completo en 2018.\n\nNumerosas renovaciones recientes: nuevas bombas de agua y aire acondicionado, hidráulicos de plataforma renovados, nueva pasarela, nuevo calentador de agua, nuevas tuberías y depósito de aguas negras, baterías nuevas, instalación eléctrica y cargadores nuevos, nuevas bombas de sentina.",
+      en: "Astondoa 82 GLX custom built. Single owner since launch.\n\nFive cabins, large salon-dining room with crystal table and reupholstered sofas, custom galley. Large flybridge with roof and extendable awning, jacuzzi with hot water and seawater, five independent seating zones.\n\n2.40m hydraulic swim platform, new gangway, electric access door. Special parquet throughout. Modern exclusive interior decor, teak in very good condition. Stainless steel railings on flybridge, alarm and security cameras, special music system.\n\nHigh-end stabilizers with Seakeeper, large capacity watermaker. MTU engines serviced, generators with 5,000h revision completed. New EPIRB and life raft. Lista 6 and taxes paid. Fully painted in 2018.\n\nNumerous recent renovations: new water and AC pumps, renewed platform hydraulics, new gangway, new water heater, new black water pipes and tank, new batteries, new electrical installation and chargers, new bilge pumps."
     },
     specs: {
-      es: { "Eslora": "24,99 m", "Manga": "6,20 m", "Calado": "1,50 m", "Motor": "2x MTU 10V 2000 M93 — 5.396 CV", "Combustible": "Diesel", "Cabinas": "7", "Literas": "8", "Banos": "8", "Ano": "2008", "Puerto": "Barcelona" },
+      es: { "Eslora": "24,99 m", "Manga": "6,20 m", "Calado": "1,50 m", "Motor": "2x MTU 10V 2000 M93 — 5.396 CV", "Combustible": "Diesel", "Cabinas": "7", "Literas": "8", "Baños": "8", "Año": "2008", "Puerto": "Barcelona" },
       en: { "Length": "24.99 m", "Beam": "6.20 m", "Draft": "1.50 m", "Engine": "2x MTU 10V 2000 M93 — 5,396 HP", "Fuel": "Diesel", "Cabins": "7", "Berths": "8", "Heads": "8", "Year": "2008", "Port": "Barcelona" }
     },
     equipment: {
       es: {
-        'Electrico': ['Toma de corriente', 'Generador', 'Inversor'],
-        'Electronica': ['Sonda', 'Radar', 'Corredera', 'Detector de radar', 'Instrumentos de viento', 'Repetidores', 'TV', 'Centro de navegacion', 'Plotter', 'DVD', 'Piloto automatico', 'Radio', 'Compas', 'CD', 'GPS', 'Altavoces de banera', 'VHF', 'TV pantalla plana', 'AIS'],
-        'Interior': ['Estabilizador Seakeeper', 'Helice de popa', 'Lavavajillas', 'Helice de proa', 'Lavadora', 'Bombas de sentina electricas/manuales', 'Horno', 'Microondas', 'WC marino', 'Aire acondicionado', 'WC electrico', 'Calefaccion', 'Agua caliente', 'Frigorifico', 'Potabilizadora', 'Congelador', 'Bomba de agua salada', 'Cargador de baterias'],
+        'Eléctrico': ['Toma de corriente', 'Generador', 'Inversor'],
+        'Electrónica': ['Sonda', 'Radar', 'Corredera', 'Detector de radar', 'Instrumentos de viento', 'Repetidores', 'TV', 'Centro de navegacion', 'Plotter', 'DVD', 'Piloto automatico', 'Radio', 'Compas', 'CD', 'GPS', 'Altavoces de banera', 'VHF', 'TV pantalla plana', 'AIS'],
+        'Interior': ['Estabilizador Seakeeper', 'Helice de popa', 'Lavavajillas', 'Helice de proa', 'Lavadora', 'Bombas de sentina electricas/manuales', 'Horno', 'Microondas', 'WC marino', 'Aire acondicionado', 'WC electrico', 'Calefacción', 'Agua caliente', 'Frigorifico', 'Potabilizadora', 'Congelador', 'Bomba de agua salada', 'Cargador de baterias'],
         'Exterior': ['Teca en banera', 'Ducha de banera', 'Teca en pasillos laterales', 'Molinete electrico', 'Joystick', 'Pasarela', 'Pescantes', 'Pasarela hidraulica', 'Reflector de radar', 'Neumatica', 'Balsa salvavidas', 'Cojines de banera', 'Mesa de banera', 'Escalera de bano', 'Sistema de surf'],
         'Adicional': ['Moto de agua', 'Luces subacuaticas', 'Juguetes acuaticos', 'Grua', 'Bodega de vinos', 'Garaje', 'Walkaround', 'Jacuzzi']
       },
@@ -63,7 +63,7 @@ const boats = [
       }
     },
     measurements: {
-      es: { 'Eslora total': '24,99 m', 'Manga': '6,20 m', 'Calado': '1,50 m', 'Capacidad': '12 personas', 'Casco': 'Fibra de vidrio, Deep V', 'Instalacion electrica': '24V', 'Cabinas': '7', 'Banos': '8' },
+      es: { 'Eslora total': '24,99 m', 'Manga': '6,20 m', 'Calado': '1,50 m', 'Capacidad': '12 personas', 'Casco': 'Fibra de vidrio, Deep V', 'Instalación eléctrica': '24V', 'Cabinas': '7', 'Banos': '8' },
       en: { 'LOA': '24.99 m', 'Beam': '6.20 m', 'Draft': '1.50 m', 'Capacity': '12 persons', 'Hull': 'Fiberglass, Deep V', 'Electrical': '24V', 'Cabins': '7', 'Heads': '8' }
     },
     highlights: {
@@ -107,14 +107,14 @@ const boats = [
       en: "Astondoa 72 GLX represents the combination of luxury, performance and classic design. A large-length vessel with exceptional capabilities and meticulous attention to detail.\n\nWith a total length of 22 metres and a generous beam, she offers stability and interior space. Her hull is designed for smooth and safe navigation even in adverse conditions, thanks to naval architecture focused on maximising efficiency and comfort on board.\n\nThe interior finishes reflect the quality and luxury characteristic of Astondoa: noble woods, elegant upholstery and careful design in every corner. Large windows allow natural light in, creating a warm and open atmosphere.\n\nThe MAN engines deliver excellent performance in both cruising and top speed. Five cabins, four heads. Ideal for cruises and holidays."
     },
     specs: {
-      es: { "Eslora": "22,00 m", "Manga": "5,45 m", "Calado": "2,10 m", "Motor": "2x MAN 1.300 CV", "Combustible": "Diesel", "Cabinas": "5", "Literas": "8", "Banos": "4", "Ano": "2003", "Puerto": "Alicante" },
+      es: { "Eslora": "22,00 m", "Manga": "5,45 m", "Calado": "2,10 m", "Motor": "2x MAN 1.300 CV", "Combustible": "Diesel", "Cabinas": "5", "Literas": "8", "Baños": "4", "Año": "2003", "Puerto": "Alicante" },
       en: { "Length": "22.00 m", "Beam": "5.45 m", "Draft": "2.10 m", "Engine": "2x MAN 1,300 HP", "Fuel": "Diesel", "Cabins": "5", "Berths": "8", "Heads": "4", "Year": "2003", "Port": "Alicante" }
     },
     equipment: {
       es: {
-        'Electrico': ['Toma de corriente'],
-        'Electronica': ['Sonda', 'Radar', 'Corredera', 'Ordenador', 'TV', 'Centro de navegacion', 'Plotter', 'DVD', 'Piloto automatico', 'Radio', 'Compas', 'CD', 'GPS', 'Altavoces de banera', 'VHF', 'TV pantalla plana', 'WiFi', 'AIS'],
-        'Interior': ['Estabilizador Seakeeper', 'Helice de popa', 'Lavavajillas', 'Helice de proa', 'Lavadora', 'Bombas de sentina electricas/manuales', 'Horno', 'Microondas', 'Compresor de aire', 'WC marino', 'Aire acondicionado', 'WC electrico', 'Calefaccion', 'WC quimico', 'Agua caliente', 'Frigorifico', 'Potabilizadora', 'Congelador', 'Bomba de agua salada', 'Cargador de baterias'],
+        'Eléctrico': ['Toma de corriente'],
+        'Electrónica': ['Sonda', 'Radar', 'Corredera', 'Ordenador', 'TV', 'Centro de navegacion', 'Plotter', 'DVD', 'Piloto automatico', 'Radio', 'Compas', 'CD', 'GPS', 'Altavoces de banera', 'VHF', 'TV pantalla plana', 'WiFi', 'AIS'],
+        'Interior': ['Estabilizador Seakeeper', 'Helice de popa', 'Lavavajillas', 'Helice de proa', 'Lavadora', 'Bombas de sentina electricas/manuales', 'Horno', 'Microondas', 'Compresor de aire', 'WC marino', 'Aire acondicionado', 'WC electrico', 'Calefacción', 'WC quimico', 'Agua caliente', 'Frigorifico', 'Potabilizadora', 'Congelador', 'Bomba de agua salada', 'Cargador de baterias'],
         'Exterior': ['Teca en banera', 'Ducha de banera', 'Teca en pasillos laterales', 'Molinete electrico', 'Soporte fueraborda', 'Pasarela', 'Joystick', 'Pasarela hidraulica', 'Panel solar', 'Balsa salvavidas', 'Cojines de banera', 'Mesa de banera', 'Escalera de bano', 'Escalera hidraulica', 'Tangones electricos', 'Estabilizadores', 'Estabilizador de aletas', 'Sistema de surf', 'Plataforma de bano hidraulica']
       },
       en: {
@@ -141,7 +141,7 @@ const boats = [
       }
     },
     measurements: {
-      es: { 'Eslora total': '22,00 m', 'Eslora de cubierta': '21,68 m', 'Manga': '5,45 m', 'Calado': '2,10 m', 'Francobordo': '2,00 m', 'Linea de flotacion': '18,50 m', 'Capacidad': '12 personas', 'Casco': 'Fibra de vidrio, Deep V', 'Agua dulce': '800 L', 'Combustible': '4.500 L', 'Cabinas': '5', 'Banos': '4', 'Velocidad crucero': '24 nudos', 'Velocidad maxima': '30 nudos', 'Autonomia': '300 mn' },
+      es: { 'Eslora total': '22,00 m', 'Eslora de cubierta': '21,68 m', 'Manga': '5,45 m', 'Calado': '2,10 m', 'Francobordo': '2,00 m', 'Línea de flotación': '18,50 m', 'Capacidad': '12 personas', 'Casco': 'Fibra de vidrio, Deep V', 'Agua dulce': '800 L', 'Combustible': '4.500 L', 'Cabinas': '5', 'Banos': '4', 'Velocidad crucero': '24 nudos', 'Velocidad máxima': '30 nudos', 'Autonomía': '300 mn' },
       en: { 'LOA': '22.00 m', 'Deck length': '21.68 m', 'Beam': '5.45 m', 'Draft': '2.10 m', 'Headroom': '2.00 m', 'Waterline': '18.50 m', 'Capacity': '12 persons', 'Hull': 'Fiberglass, Deep V', 'Freshwater': '800 L', 'Fuel': '4,500 L', 'Cabins': '5', 'Heads': '4', 'Cruising speed': '24 kn', 'Max speed': '30 kn', 'Range': '300 nm' }
     },
     highlights: {
@@ -185,13 +185,13 @@ const boats = [
       en: "Astondoa 53 GLX, fiberglass cruiser monohull with 15.85m LOA, 4.72m beam and 2.45m draft. Displacement 30,270 kg.\n\nThree cabins, full galley, two heads. Double crew quarters. Detroit 2 × 550 HP engines with generator. 850 engine hours.\n\nGood overall condition, maintenance up to date. Cruising speed 27 knots, max speed 32 knots.\n\nEquipped with radar, autopilot, sounder, VHF, bow thruster, electric controls, GPS plotter, electric windlass, hydraulic gangway, tender with outboard motor, fly cover."
     },
     specs: {
-      es: { "Eslora": "15,85 m", "Manga": "4,72 m", "Calado": "2,45 m", "Motor": "2x Detroit 550 CV", "Combustible": "Diesel", "Cabinas": "3", "Literas": "6", "Banos": "2", "Ano": "1993", "Puerto": "Barcelona" },
+      es: { "Eslora": "15,85 m", "Manga": "4,72 m", "Calado": "2,45 m", "Motor": "2x Detroit 550 CV", "Combustible": "Diesel", "Cabinas": "3", "Literas": "6", "Baños": "2", "Año": "1993", "Puerto": "Barcelona" },
       en: { "Length": "15.85 m", "Beam": "4.72 m", "Draft": "2.45 m", "Engine": "2x Detroit 550 HP", "Fuel": "Diesel", "Cabins": "3", "Berths": "6", "Heads": "2", "Year": "1993", "Port": "Barcelona" }
     },
     equipment: {
       es: {
-        'Electrico': ['Generador'],
-        'Electronica': ['Sonda', 'Centro de navegacion', 'Plotter', 'Piloto automatico', 'Compas', 'GPS', 'VHF'],
+        'Eléctrico': ['Generador'],
+        'Electrónica': ['Sonda', 'Centro de navegacion', 'Plotter', 'Piloto automatico', 'Compas', 'GPS', 'VHF'],
         'Interior': ['Helice de proa'],
         'Exterior': ['Neumatica']
       },
@@ -263,14 +263,14 @@ const boats = [
       en: "Astondoa 39, compact and manageable boat with 11.95m LOA. Perfect for weekend getaways.\n\nTwo cabins, one head, spacious teak cockpit. Volvo TAMD 63PA engines with 732 HP total power. Cruising speed 20 knots, max 25 knots.\n\nEquipped with air conditioning, heating, bow thruster, generator, inverter. Hydraulic gangway, life raft. Full electronics with radar, autopilot, GPS plotter, sounder, VHF.\n\nBerth available at Port Esportiu de El Masnou."
     },
     specs: {
-      es: { "Eslora": "11,95 m", "Manga": "4,00 m", "Calado": "1,10 m", "Motor": "2x Volvo TAMD 63PA — 732 CV", "Combustible": "Diesel", "Cabinas": "2", "Literas": "4", "Banos": "1", "Ano": "2002", "Puerto": "El Masnou" },
+      es: { "Eslora": "11,95 m", "Manga": "4,00 m", "Calado": "1,10 m", "Motor": "2x Volvo TAMD 63PA — 732 CV", "Combustible": "Diesel", "Cabinas": "2", "Literas": "4", "Baños": "1", "Año": "2002", "Puerto": "El Masnou" },
       en: { "Length": "11.95 m", "Beam": "4.00 m", "Draft": "1.10 m", "Engine": "2x Volvo TAMD 63PA — 732 HP", "Fuel": "Diesel", "Cabins": "2", "Berths": "4", "Heads": "1", "Year": "2002", "Port": "El Masnou" }
     },
     equipment: {
       es: {
-        'Electrico': ['Toma de corriente', 'Generador', 'Inversor'],
-        'Electronica': ['Sonda', 'Radar', 'Corredera', 'Detector de radar', 'Instrumentos de viento', 'TV', 'Plotter', 'Piloto automatico', 'Radio', 'Compas', 'CD', 'GPS', 'Altavoces de banera', 'VHF'],
-        'Interior': ['Helice de proa', 'Bombas de sentina electricas/manuales', 'Aire acondicionado', 'WC electrico', 'Calefaccion', 'Agua caliente', 'Frigorifico', 'Congelador', 'Cargador de baterias'],
+        'Eléctrico': ['Toma de corriente', 'Generador', 'Inversor'],
+        'Electrónica': ['Sonda', 'Radar', 'Corredera', 'Detector de radar', 'Instrumentos de viento', 'TV', 'Plotter', 'Piloto automatico', 'Radio', 'Compas', 'CD', 'GPS', 'Altavoces de banera', 'VHF'],
+        'Interior': ['Helice de proa', 'Bombas de sentina electricas/manuales', 'Aire acondicionado', 'WC electrico', 'Calefacción', 'Agua caliente', 'Frigorifico', 'Congelador', 'Cargador de baterias'],
         'Exterior': ['Teca en banera', 'Pasarela hidraulica', 'Balsa salvavidas']
       },
       en: {
@@ -297,7 +297,7 @@ const boats = [
       }
     },
     measurements: {
-      es: { 'Eslora total': '11,95 m', 'Manga': '4,00 m', 'Casco': 'Fibra de vidrio, monocasco', 'Velocidad crucero': '20 nudos', 'Velocidad maxima': '25 nudos' },
+      es: { 'Eslora total': '11,95 m', 'Manga': '4,00 m', 'Casco': 'Fibra de vidrio, monocasco', 'Velocidad crucero': '20 nudos', 'Velocidad máxima': '25 nudos' },
       en: { 'LOA': '11.95 m', 'Beam': '4.00 m', 'Hull': 'Fiberglass, monohull', 'Cruising speed': '20 kn', 'Max speed': '25 kn' }
     },
     highlights: {
@@ -341,14 +341,14 @@ const boats = [
       en: "Spanish-built Navalia 60, year 2006. Cruiser with 18m LOA and fiberglass hull.\n\nFour cabins, two heads. Caterpillar engines in very good condition with cruising speed of 20 knots and max speed of 30 knots. Electric windlass.\n\nTeak cockpit and side decks. Equipped with joystick, hydraulic gangway, cockpit shower, tender, cockpit cushions and table. Electronics with radar, autopilot, GPS plotter, sounder, VHF, radar detector.\n\nSurveyed and ready for extended holidays."
     },
     specs: {
-      es: { "Eslora": "18,00 m", "Manga": "5,20 m", "Calado": "1,50 m", "Motor": "2x Caterpillar — 1.073 CV", "Combustible": "Diesel", "Cabinas": "4", "Literas": "6", "Banos": "2", "Ano": "2006", "Puerto": "Barcelona" },
+      es: { "Eslora": "18,00 m", "Manga": "5,20 m", "Calado": "1,50 m", "Motor": "2x Caterpillar — 1.073 CV", "Combustible": "Diesel", "Cabinas": "4", "Literas": "6", "Baños": "2", "Año": "2006", "Puerto": "Barcelona" },
       en: { "Length": "18.00 m", "Beam": "5.20 m", "Draft": "1.50 m", "Engine": "2x Caterpillar — 1,073 HP", "Fuel": "Diesel", "Cabins": "4", "Berths": "6", "Heads": "2", "Year": "2006", "Port": "Barcelona" }
     },
     equipment: {
       es: {
-        'Electrico': ['Toma de corriente', 'Generador'],
-        'Electronica': ['Sonda', 'Radar', 'Detector de radar', 'Repetidores', 'Plotter', 'Piloto automatico', 'Radio', 'Compas', 'CD', 'GPS', 'Altavoces de banera', 'VHF'],
-        'Interior': ['Helice de proa', 'Bombas de sentina electricas/manuales', 'Microondas', 'WC marino', 'Aire acondicionado', 'WC electrico', 'Calefaccion', 'Agua caliente', 'Frigorifico', 'Congelador', 'Bomba de agua salada', 'Cargador de baterias'],
+        'Eléctrico': ['Toma de corriente', 'Generador'],
+        'Electrónica': ['Sonda', 'Radar', 'Detector de radar', 'Repetidores', 'Plotter', 'Piloto automatico', 'Radio', 'Compas', 'CD', 'GPS', 'Altavoces de banera', 'VHF'],
+        'Interior': ['Helice de proa', 'Bombas de sentina electricas/manuales', 'Microondas', 'WC marino', 'Aire acondicionado', 'WC electrico', 'Calefacción', 'Agua caliente', 'Frigorifico', 'Congelador', 'Bomba de agua salada', 'Cargador de baterias'],
         'Exterior': ['Teca en banera', 'Ducha de banera', 'Teca en pasillos laterales', 'Soporte fueraborda', 'Joystick', 'Pasarela hidraulica', 'Reflector de radar', 'Neumatica', 'Cojines de banera', 'Mesa de banera', 'Escalera de bano']
       },
       en: {
@@ -375,7 +375,7 @@ const boats = [
       }
     },
     measurements: {
-      es: { 'Eslora total': '18,00 m', 'Manga': '5,20 m', 'Calado': '1,50 m', 'Casco': 'Fibra de vidrio', 'Cabinas': '4', 'Banos': '2', 'Velocidad crucero': '20 nudos', 'Velocidad maxima': '30 nudos' },
+      es: { 'Eslora total': '18,00 m', 'Manga': '5,20 m', 'Calado': '1,50 m', 'Casco': 'Fibra de vidrio', 'Cabinas': '4', 'Banos': '2', 'Velocidad crucero': '20 nudos', 'Velocidad máxima': '30 nudos' },
       en: { 'LOA': '18.00 m', 'Beam': '5.20 m', 'Draft': '1.50 m', 'Hull': 'Fiberglass', 'Cabins': '4', 'Heads': '2', 'Cruising speed': '20 kn', 'Max speed': '30 kn' }
     },
     highlights: {
@@ -419,14 +419,14 @@ const boats = [
       en: "Sunseeker Manhattan 50, an icon of British design in good condition with maintenance up to date. 15.66m LOA.\n\nFlybridge with solarium and enveloping seats. Luminous interior with salon finished in noble woods, fully equipped galley. Three comfortable cabins including master suite with private bathroom.\n\nMAN D2876LE405 engines with 888 HP total power. Direct drive transmission. Cruising speed 18 knots, max 28 knots.\n\nEquipped with bow thruster, air conditioning, heating, generator, inverter. Teak cockpit. Hydraulic gangway, tender, life raft. Full electronics with radar, autopilot, GPS plotter, sounder, VHF."
     },
     specs: {
-      es: { "Eslora": "15,66 m", "Manga": "4,53 m", "Calado": "1,17 m", "Motor": "2x MAN D2876LE405 — 888 CV", "Combustible": "Diesel", "Cabinas": "4", "Literas": "6", "Banos": "2", "Ano": "2004", "Puerto": "El Masnou" },
+      es: { "Eslora": "15,66 m", "Manga": "4,53 m", "Calado": "1,17 m", "Motor": "2x MAN D2876LE405 — 888 CV", "Combustible": "Diesel", "Cabinas": "4", "Literas": "6", "Baños": "2", "Año": "2004", "Puerto": "El Masnou" },
       en: { "Length": "15.66 m", "Beam": "4.53 m", "Draft": "1.17 m", "Engine": "2x MAN D2876LE405 — 888 HP", "Fuel": "Diesel", "Cabins": "4", "Berths": "6", "Heads": "2", "Year": "2004", "Port": "El Masnou" }
     },
     equipment: {
       es: {
-        'Electrico': ['Toma de corriente', 'Generador', 'Inversor'],
-        'Electronica': ['Sonda', 'Radar', 'Corredera', 'Detector de radar', 'Repetidores', 'TV', 'Plotter', 'Piloto automatico', 'Radio', 'Compas', 'GPS', 'Altavoces de banera', 'VHF'],
-        'Interior': ['Helice de proa', 'Bombas de sentina electricas/manuales', 'Horno', 'Microondas', 'Aire acondicionado', 'WC electrico', 'Calefaccion', 'Agua caliente', 'Frigorifico', 'Congelador', 'Bomba de agua salada', 'Cargador de baterias'],
+        'Eléctrico': ['Toma de corriente', 'Generador', 'Inversor'],
+        'Electrónica': ['Sonda', 'Radar', 'Corredera', 'Detector de radar', 'Repetidores', 'TV', 'Plotter', 'Piloto automatico', 'Radio', 'Compas', 'GPS', 'Altavoces de banera', 'VHF'],
+        'Interior': ['Helice de proa', 'Bombas de sentina electricas/manuales', 'Horno', 'Microondas', 'Aire acondicionado', 'WC electrico', 'Calefacción', 'Agua caliente', 'Frigorifico', 'Congelador', 'Bomba de agua salada', 'Cargador de baterias'],
         'Exterior': ['Teca en banera', 'Ducha de banera', 'Pasarela hidraulica', 'Reflector de radar', 'Neumatica', 'Balsa salvavidas', 'Cojines de banera', 'Mesa de banera', 'Escalera de bano']
       },
       en: {
@@ -453,7 +453,7 @@ const boats = [
       }
     },
     measurements: {
-      es: { 'Eslora total': '15,66 m', 'Manga': '4,53 m', 'Casco': 'Fibra de vidrio', 'Molinete electrico': 'Si', 'Agua dulce': '500 L', 'Combustible': '2 x 1.250 L', 'Cabinas': '4', 'Velocidad crucero': '18 nudos', 'Velocidad maxima': '28 nudos' },
+      es: { 'Eslora total': '15,66 m', 'Manga': '4,53 m', 'Casco': 'Fibra de vidrio', 'Molinete electrico': 'Si', 'Agua dulce': '500 L', 'Combustible': '2 x 1.250 L', 'Cabinas': '4', 'Velocidad crucero': '18 nudos', 'Velocidad máxima': '28 nudos' },
       en: { 'LOA': '15.66 m', 'Beam': '4.53 m', 'Hull': 'Fiberglass', 'Electric windlass': 'Yes', 'Freshwater': '500 L', 'Fuel': '2 x 1,250 L', 'Cabins': '4', 'Cruising speed': '18 kn', 'Max speed': '28 kn' }
     },
     highlights: {
@@ -497,14 +497,14 @@ const boats = [
       en: "Hanse 470, fiberglass monohull sailing yacht with 14.30m LOA. Leading German shipyard.\n\nThree cabins, two heads. Interior Volvo engine with 101 HP, sail drive transmission. Electric windlass. 12V electrical system.\n\nSails: roller furling mainsail and genoa. Teak cockpit and side decks. Equipped with cockpit shower, davits, radar reflector, life raft, cockpit cushions and table, bathing ladder.\n\nFull electronics: radar, autopilot, navigation center, GPS plotter, sounder, log/speed, radar detector, wind instruments, VHF.\n\nDesigned for quality and style sailing."
     },
     specs: {
-      es: { "Eslora": "14,30 m", "Manga": "4,51 m", "Calado": "2,60 m", "Motor": "1x Volvo 101 CV", "Combustible": "Diesel", "Cabinas": "3", "Literas": "6", "Banos": "2", "Ano": "2007", "Puerto": "Barcelona" },
+      es: { "Eslora": "14,30 m", "Manga": "4,51 m", "Calado": "2,60 m", "Motor": "1x Volvo 101 CV", "Combustible": "Diesel", "Cabinas": "3", "Literas": "6", "Baños": "2", "Año": "2007", "Puerto": "Barcelona" },
       en: { "Length": "14.30 m", "Beam": "4.51 m", "Draft": "2.60 m", "Engine": "1x Volvo 101 HP", "Fuel": "Diesel", "Cabins": "3", "Berths": "6", "Heads": "2", "Year": "2007", "Port": "Barcelona" }
     },
     equipment: {
       es: {
-        'Electrico': ['Toma de corriente'],
-        'Electronica': ['Sonda', 'Radar', 'Corredera', 'Detector de radar', 'Instrumentos de viento', 'Centro de navegacion', 'Plotter', 'Piloto automatico', 'Radio', 'Compas', 'CD', 'GPS', 'VHF'],
-        'Interior': ['Bombas de sentina electricas/manuales', 'Horno', 'Microondas', 'WC marino', 'Calefaccion', 'Agua caliente', 'Frigorifico', 'Bomba de agua salada', 'Cargador de baterias'],
+        'Eléctrico': ['Toma de corriente'],
+        'Electrónica': ['Sonda', 'Radar', 'Corredera', 'Detector de radar', 'Instrumentos de viento', 'Centro de navegacion', 'Plotter', 'Piloto automatico', 'Radio', 'Compas', 'CD', 'GPS', 'VHF'],
+        'Interior': ['Bombas de sentina electricas/manuales', 'Horno', 'Microondas', 'WC marino', 'Calefacción', 'Agua caliente', 'Frigorifico', 'Bomba de agua salada', 'Cargador de baterias'],
         'Exterior': ['Teca en banera', 'Ducha de banera', 'Teca en pasillos laterales', 'Pasarela', 'Pescantes', 'Reflector de radar', 'Balsa salvavidas', 'Cojines de banera', 'Mesa de banera', 'Escalera de bano'],
         'Velas': ['Mayor enrollable', 'Genova enrollable']
       },
@@ -531,7 +531,7 @@ const boats = [
       }
     },
     measurements: {
-      es: { 'Eslora total': '14,30 m', 'Manga': '4,51 m', 'Calado': '2,60 m', 'Casco': 'Fibra de vidrio, monocasco', 'Molinete electrico': 'Si', 'Instalacion electrica': '12V', 'Agua dulce': '400 L', 'Combustible': '250 L', 'Cabinas': '3', 'Banos': '2' },
+      es: { 'Eslora total': '14,30 m', 'Manga': '4,51 m', 'Calado': '2,60 m', 'Casco': 'Fibra de vidrio, monocasco', 'Molinete electrico': 'Si', 'Instalación eléctrica': '12V', 'Agua dulce': '400 L', 'Combustible': '250 L', 'Cabinas': '3', 'Banos': '2' },
       en: { 'LOA': '14.30 m', 'Beam': '4.51 m', 'Draft': '2.60 m', 'Hull': 'Fiberglass, monohull', 'Electric windlass': 'Yes', 'Electrical': '12V', 'Freshwater': '400 L', 'Fuel': '250 L', 'Cabins': '3', 'Heads': '2' }
     },
     highlights: {
@@ -575,13 +575,13 @@ const boats = [
       en: "Grand Banks 38 Eastbay EX, a timeless benchmark in quality trawlers. Elegance, quality and stability.\n\nDeep V hull for smooth and safe navigation. Two Caterpillar 3126B engines with 450 HP each and only 1,306 hours. Cruising speed 22 knots, max 28 knots. Range 300 nautical miles.\n\nUnmistakable Eastbay style: classic lines, low profile, teak deck. Wide open cockpit with shower. Solid wood, brass details, traditional finishes. Elevated salon with panoramic windows.\n\nTwo cabins, two heads. Stern thruster, electric galley, microwave. Electronics with radar, GPS, sounder, compass, VHF. Available for viewing in El Masnou."
     },
     specs: {
-      es: { "Eslora": "12,45 m", "Manga": "4,00 m", "Calado": "1,18 m", "Motor": "2x Caterpillar 3126B — 900 CV", "Combustible": "Diesel", "Cabinas": "2", "Literas": "4", "Banos": "2", "Ano": "2002", "Puerto": "El Masnou" },
+      es: { "Eslora": "12,45 m", "Manga": "4,00 m", "Calado": "1,18 m", "Motor": "2x Caterpillar 3126B — 900 CV", "Combustible": "Diesel", "Cabinas": "2", "Literas": "4", "Baños": "2", "Año": "2002", "Puerto": "El Masnou" },
       en: { "Length": "12.45 m", "Beam": "4.00 m", "Draft": "1.18 m", "Engine": "2x Caterpillar 3126B — 900 HP", "Fuel": "Diesel", "Cabins": "2", "Berths": "4", "Heads": "2", "Year": "2002", "Port": "El Masnou" }
     },
     equipment: {
       es: {
-        'Electrico': ['Toma de corriente'],
-        'Electronica': ['Sonda', 'Radar', 'Detector de radar', 'Compas', 'GPS', 'Altavoces de banera', 'VHF'],
+        'Eléctrico': ['Toma de corriente'],
+        'Electrónica': ['Sonda', 'Radar', 'Detector de radar', 'Compas', 'GPS', 'Altavoces de banera', 'VHF'],
         'Interior': ['Helice de popa', 'Bombas de sentina electricas/manuales', 'Horno electrico', 'Microondas', 'WC electrico', 'Agua caliente', 'Frigorifico', 'Cargador de baterias'],
         'Exterior': ['Teca en banera', 'Ducha de banera', 'Teca en pasillos laterales', 'Pasarela', 'Reflector de radar', 'Neumatica', 'Cojines de banera', 'Mesa de banera', 'Escalera de bano']
       },
@@ -609,7 +609,7 @@ const boats = [
       }
     },
     measurements: {
-      es: { 'Eslora total': '12,45 m', 'Manga': '4,00 m', 'Calado': '1,18 m', 'Capacidad': '12 personas', 'Casco': 'Fibra de vidrio, Deep V', 'Instalacion electrica': '24V', 'Molinete electrico': 'Si', 'Agua dulce': '380 L', 'Combustible': '1.306 L', 'Cabinas': '2', 'Banos': '2', 'Velocidad crucero': '22 nudos', 'Velocidad maxima': '28 nudos', 'Autonomia': '300 mn' },
+      es: { 'Eslora total': '12,45 m', 'Manga': '4,00 m', 'Calado': '1,18 m', 'Capacidad': '12 personas', 'Casco': 'Fibra de vidrio, Deep V', 'Instalación eléctrica': '24V', 'Molinete electrico': 'Si', 'Agua dulce': '380 L', 'Combustible': '1.306 L', 'Cabinas': '2', 'Banos': '2', 'Velocidad crucero': '22 nudos', 'Velocidad máxima': '28 nudos', 'Autonomía': '300 mn' },
       en: { 'LOA': '12.45 m', 'Beam': '4.00 m', 'Draft': '1.18 m', 'Capacity': '12 persons', 'Hull': 'Fiberglass, Deep V', 'Electrical': '24V', 'Electric windlass': 'Yes', 'Freshwater': '380 L', 'Fuel': '1,306 L', 'Cabins': '2', 'Heads': '2', 'Cruising speed': '22 kn', 'Max speed': '28 kn', 'Range': '300 nm' }
     },
     highlights: {
@@ -653,13 +653,13 @@ const boats = [
       en: "Rodman 900 Flybridge, a reliable and seaworthy Spanish boat. 9m LOA, 3.30m beam.\n\nOne cabin, one head, flybridge with good visibility. Volvo 200 HP diesel engine, inboard installation. 3-blade bronze propeller.\n\nIdeal for weekend outings and sport fishing.\n\nEquipped with radar, autopilot, sounder, log/speed, radar detector, GPS plotter, compass, VHF, cockpit speakers. Life raft. Shore power connection."
     },
     specs: {
-      es: { "Eslora": "9,00 m", "Manga": "3,30 m", "Calado": "0,90 m", "Motor": "1x Volvo 200 CV", "Combustible": "Diesel", "Cabinas": "1", "Literas": "4", "Banos": "1", "Ano": "1996", "Puerto": "El Masnou" },
+      es: { "Eslora": "9,00 m", "Manga": "3,30 m", "Calado": "0,90 m", "Motor": "1x Volvo 200 CV", "Combustible": "Diesel", "Cabinas": "1", "Literas": "4", "Baños": "1", "Año": "1996", "Puerto": "El Masnou" },
       en: { "Length": "9.00 m", "Beam": "3.30 m", "Draft": "0.90 m", "Engine": "1x Volvo 200 HP", "Fuel": "Diesel", "Cabins": "1", "Berths": "4", "Heads": "1", "Year": "1996", "Port": "El Masnou" }
     },
     equipment: {
       es: {
-        'Electrico': ['Toma de corriente'],
-        'Electronica': ['Sonda', 'Radar', 'Corredera', 'Detector de radar', 'Plotter', 'Piloto automatico', 'Radio', 'Compas', 'GPS', 'Altavoces de banera', 'VHF'],
+        'Eléctrico': ['Toma de corriente'],
+        'Electrónica': ['Sonda', 'Radar', 'Corredera', 'Detector de radar', 'Plotter', 'Piloto automatico', 'Radio', 'Compas', 'GPS', 'Altavoces de banera', 'VHF'],
         'Exterior': ['Balsa salvavidas']
       },
       en: {
@@ -725,12 +725,12 @@ const boats = [
       en: "Fjord 900, functional and robust Scandinavian design. Fiberglass monohull with 9m LOA, 3m beam and 0.80m draft. Displacement 3 tonnes.\n\nTwo cabins, double crew, one head, equipped galley. Water capacity 100 litres, fuel capacity 800 litres.\n\nTwo Volvo 200 HP engines. GPS plotter, VHF, sounder, electric windlass, bathing ladder, awnings.\n\nSurvey valid. The most accessible vessel in our portfolio."
     },
     specs: {
-      es: { "Eslora": "9,00 m", "Manga": "3,00 m", "Calado": "0,80 m", "Motor": "2x Volvo 200 CV", "Combustible": "Diesel", "Cabinas": "2", "Literas": "2", "Banos": "1", "Ano": "1990", "Puerto": "El Masnou" },
+      es: { "Eslora": "9,00 m", "Manga": "3,00 m", "Calado": "0,80 m", "Motor": "2x Volvo 200 CV", "Combustible": "Diesel", "Cabinas": "2", "Literas": "2", "Baños": "1", "Año": "1990", "Puerto": "El Masnou" },
       en: { "Length": "9.00 m", "Beam": "3.00 m", "Draft": "0.80 m", "Engine": "2x Volvo 200 HP", "Fuel": "Diesel", "Cabins": "2", "Berths": "2", "Heads": "1", "Year": "1990", "Port": "El Masnou" }
     },
     equipment: {
       es: {
-        'Electronica': ['GPS plotter', 'VHF', 'Sonda'],
+        'Electrónica': ['GPS plotter', 'VHF', 'Sonda'],
         'Exterior': ['Molinete electrico', 'Escalera de bano', 'Toldos']
       },
       en: {
@@ -799,13 +799,13 @@ const boats = [
       en: "Finnyacht 35, solidly built Nordic sailboat. 10.44m LOA, 3.12m beam, 1.69m draft. Full keel.\n\nLarge stern cockpit. Cruising speed 7-8 knots, great range of 300 nautical miles. Ideal for liveaboard.\n\nSemi-new Vetus 67 HP engine with only 52 hours. Completely clean fuel tanks, stainless steel engine beds.\n\nSails: roller furling mainsail and genoa. Solar panel. Equipped with GPS plotter, VHF, compass, radio, flat screen TV. Oven, fridge, marine WC. Inverter, shore power, battery charger."
     },
     specs: {
-      es: { "Eslora": "10,44 m", "Manga": "3,12 m", "Calado": "1,69 m", "Motor": "1x Vetus 67 CV", "Combustible": "Diesel", "Cabinas": "1", "Literas": "5", "Banos": "1", "Ano": "1972", "Puerto": "El Masnou" },
+      es: { "Eslora": "10,44 m", "Manga": "3,12 m", "Calado": "1,69 m", "Motor": "1x Vetus 67 CV", "Combustible": "Diesel", "Cabinas": "1", "Literas": "5", "Baños": "1", "Año": "1972", "Puerto": "El Masnou" },
       en: { "Length": "10.44 m", "Beam": "3.12 m", "Draft": "1.69 m", "Engine": "1x Vetus 67 HP", "Fuel": "Diesel", "Cabins": "1", "Berths": "5", "Heads": "1", "Year": "1972", "Port": "El Masnou" }
     },
     equipment: {
       es: {
-        'Electrico': ['Toma de corriente', 'Inversor'],
-        'Electronica': ['TV', 'Plotter', 'Radio', 'Compas', 'CD', 'GPS', 'Altavoces de banera', 'VHF', 'TV pantalla plana'],
+        'Eléctrico': ['Toma de corriente', 'Inversor'],
+        'Electrónica': ['TV', 'Plotter', 'Radio', 'Compas', 'CD', 'GPS', 'Altavoces de banera', 'VHF', 'TV pantalla plana'],
         'Interior': ['Bomba de sentina electrica', 'Horno', 'WC marino', 'Frigorifico', 'Cargador de baterias'],
         'Exterior': ['Pescantes', 'Reflector de radar', 'Panel solar', 'Cojines de banera', 'Escalera de bano'],
         'Velas': ['Mayor enrollable', 'Genova enrollable']
@@ -833,7 +833,7 @@ const boats = [
       }
     },
     measurements: {
-      es: { 'Eslora total': '10,44 m', 'Manga': '3,12 m', 'Calado': '1,69 m', 'Casco': 'Fibra de vidrio, quilla corrida', 'Cabinas': '1', 'Banos': '1', 'Velocidad crucero': '8 nudos', 'Velocidad maxima': '9,5 nudos', 'Autonomia': '300 mn' },
+      es: { 'Eslora total': '10,44 m', 'Manga': '3,12 m', 'Calado': '1,69 m', 'Casco': 'Fibra de vidrio, quilla corrida', 'Cabinas': '1', 'Banos': '1', 'Velocidad crucero': '8 nudos', 'Velocidad máxima': '9,5 nudos', 'Autonomía': '300 mn' },
       en: { 'LOA': '10.44 m', 'Beam': '3.12 m', 'Draft': '1.69 m', 'Hull': 'Fiberglass, full keel', 'Cabins': '1', 'Heads': '1', 'Cruising speed': '8 kn', 'Max speed': '9.5 kn', 'Range': '300 nm' }
     },
     highlights: {
@@ -877,13 +877,13 @@ const boats = [
       en: "Ketch Nordic 36 Classic, timeless elegance. Classic lines combining traditional sailing charm with oceanic robustness.\n\nDesigned for long passages with full safety. Balanced navigation, ideal for couples and families. Capacity for 8 people.\n\n10.85m LOA, 3.35m beam, 1.41m draft. Bukh 36 HP engine. Electric windlass. 200-litre fuel tank.\n\nWarm functional layout with noble woods. Well-maintained teak side decks. Two cabins, one head. Life raft.\n\nA boat for those who value character, authenticity, and autonomy at sea. Available in El Masnou."
     },
     specs: {
-      es: { "Eslora": "10,85 m", "Manga": "3,35 m", "Calado": "1,41 m", "Motor": "1x Bukh 36 CV", "Combustible": "Diesel", "Cabinas": "2", "Literas": "5", "Banos": "1", "Ano": "1981", "Puerto": "El Masnou" },
+      es: { "Eslora": "10,85 m", "Manga": "3,35 m", "Calado": "1,41 m", "Motor": "1x Bukh 36 CV", "Combustible": "Diesel", "Cabinas": "2", "Literas": "5", "Baños": "1", "Año": "1981", "Puerto": "El Masnou" },
       en: { "Length": "10.85 m", "Beam": "3.35 m", "Draft": "1.41 m", "Engine": "1x Bukh 36 HP", "Fuel": "Diesel", "Cabins": "2", "Berths": "5", "Heads": "1", "Year": "1981", "Port": "El Masnou" }
     },
     equipment: {
       es: {
-        'Electrico': ['Toma de corriente'],
-        'Electronica': ['Radar', 'TV', 'Centro de navegacion', 'Plotter', 'Radio', 'Compas', 'VHF', 'TV pantalla plana'],
+        'Eléctrico': ['Toma de corriente'],
+        'Electrónica': ['Radar', 'TV', 'Centro de navegacion', 'Plotter', 'Radio', 'Compas', 'VHF', 'TV pantalla plana'],
         'Interior': ['Bomba de sentina electrica automatica', 'WC electrico'],
         'Exterior': ['Teca en pasillos laterales', 'Balsa salvavidas']
       },
@@ -909,7 +909,7 @@ const boats = [
       }
     },
     measurements: {
-      es: { 'Eslora total': '10,85 m', 'Manga': '3,35 m', 'Calado': '1,41 m', 'Capacidad': '8 personas', 'Casco': 'Fibra de vidrio', 'Molinete electrico': 'Si', 'Instalacion electrica': '220V', 'Combustible': '200 L', 'Cabinas': '2', 'Banos': '1' },
+      es: { 'Eslora total': '10,85 m', 'Manga': '3,35 m', 'Calado': '1,41 m', 'Capacidad': '8 personas', 'Casco': 'Fibra de vidrio', 'Molinete electrico': 'Si', 'Instalación eléctrica': '220V', 'Combustible': '200 L', 'Cabinas': '2', 'Banos': '1' },
       en: { 'LOA': '10.85 m', 'Beam': '3.35 m', 'Draft': '1.41 m', 'Capacity': '8 persons', 'Hull': 'Fiberglass', 'Electric windlass': 'Yes', 'Electrical': '220V', 'Fuel': '200 L', 'Cabins': '2', 'Heads': '1' }
     },
     highlights: {
