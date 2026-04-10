@@ -4,3 +4,12 @@ temporary screenshots/
 .playwright-mcp/
 .claude/
 package-lock.json
+
+# Local work artifacts
+.specs/
+claudedocs/
+review_hero/
+review_screenshots/
+review_screenshots_*/
+sentyacht_cosasdebarcos_profile.png
+*.bak

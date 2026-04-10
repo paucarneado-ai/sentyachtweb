@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://sentyacht.com/sitemap.xml
+
+# Disallow filter/sort states (client-side, no separate pages, but defensive)
+Disallow: /*?filter=
+Disallow: /*?sort=
+Disallow: /*?page=
+
+# Disallow internal preview/draft pages (duplicates of sell page)
+Disallow: /*/preview-*/

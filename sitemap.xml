@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://sentyacht.com/es/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/yates-en-venta/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/yates-en-venta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/yachts-for-sale/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/yachts-for-sale/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/yates-en-venta/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/yachts-for-sale/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/vender-su-barco/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/vender-su-barco/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/sell-your-boat/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/sell-your-boat/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/vender-su-barco/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/sell-your-boat/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/valoracion-confidencial/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/valoracion-confidencial/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/confidential-valuation/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/confidential-valuation/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/valoracion-confidencial/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/confidential-valuation/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos-vendidos/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos-vendidos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/sold-boats/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/sold-boats/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos-vendidos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/sold-boats/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/sobre-sentyacht/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/sobre-sentyacht/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/about/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/about/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/sobre-sentyacht/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/about/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/contacto/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/contact/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/contact/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/contact/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/aviso-legal/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/aviso-legal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/legal-notice/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/legal-notice/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/aviso-legal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/legal-notice/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/politica-de-privacidad/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/politica-de-privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/privacy-policy/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/privacy-policy/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/politica-de-privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/privacy-policy/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/politica-de-cookies/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/politica-de-cookies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/cookie-policy/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/cookie-policy/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/politica-de-cookies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/cookie-policy/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos/astondoa-82-glx-2008/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/astondoa-82-glx-2008/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/astondoa-82-glx-2008/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/boats/astondoa-82-glx-2008/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/astondoa-82-glx-2008/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/astondoa-82-glx-2008/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos/astondoa-72-glx-2003/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/astondoa-72-glx-2003/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/astondoa-72-glx-2003/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/boats/astondoa-72-glx-2003/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/astondoa-72-glx-2003/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/astondoa-72-glx-2003/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos/astondoa-53-glx-1993/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/astondoa-53-glx-1993/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/astondoa-53-glx-1993/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/boats/astondoa-53-glx-1993/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/astondoa-53-glx-1993/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/astondoa-53-glx-1993/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos/astondoa-39-2002/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/astondoa-39-2002/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/astondoa-39-2002/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/boats/astondoa-39-2002/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/astondoa-39-2002/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/astondoa-39-2002/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos/navalia-60-2006/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/navalia-60-2006/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/navalia-60-2006/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/boats/navalia-60-2006/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/navalia-60-2006/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/navalia-60-2006/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos/sunseeker-manhattan-50-2004/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/sunseeker-manhattan-50-2004/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/sunseeker-manhattan-50-2004/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/boats/sunseeker-manhattan-50-2004/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/sunseeker-manhattan-50-2004/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/sunseeker-manhattan-50-2004/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos/hanse-470-2007/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/hanse-470-2007/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/hanse-470-2007/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/boats/hanse-470-2007/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/hanse-470-2007/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/hanse-470-2007/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos/grand-banks-38-eastbay-ex-2002/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/grand-banks-38-eastbay-ex-2002/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/grand-banks-38-eastbay-ex-2002/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/boats/grand-banks-38-eastbay-ex-2002/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/grand-banks-38-eastbay-ex-2002/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/grand-banks-38-eastbay-ex-2002/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos/rodman-900-flybridge-1996/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/rodman-900-flybridge-1996/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/rodman-900-flybridge-1996/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/boats/rodman-900-flybridge-1996/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/rodman-900-flybridge-1996/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/rodman-900-flybridge-1996/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos/fjord-900-1990/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/fjord-900-1990/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/fjord-900-1990/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/boats/fjord-900-1990/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/fjord-900-1990/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/fjord-900-1990/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos/finnyacht-35-1972/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/finnyacht-35-1972/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/finnyacht-35-1972/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/boats/finnyacht-35-1972/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/finnyacht-35-1972/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/finnyacht-35-1972/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/es/barcos/ketch-nordic-36-classic-1981/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/ketch-nordic-36-classic-1981/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/ketch-nordic-36-classic-1981/"/>
+  </url>
+  <url>
+    <loc>https://sentyacht.com/en/boats/ketch-nordic-36-classic-1981/</loc>
+    <lastmod>2026-04-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sentyacht.com/es/barcos/ketch-nordic-36-classic-1981/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sentyacht.com/en/boats/ketch-nordic-36-classic-1981/"/>
+  </url>
+</urlset>
