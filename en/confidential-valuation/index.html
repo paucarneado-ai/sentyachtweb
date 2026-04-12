@@ -88,7 +88,7 @@
 <!-- ═══ 1. HERO ═══ -->
 <section class="relative flex items-end val-hero">
   <img
-    src="/assets/imagenes%20web/navalia-60/hf_20260324_003017_844a0ce5-ee3a-440c-975b-3be2b4e0c292.jpeg"
+    src="/assets/Imagenes%20WEB/navalia-60/hf_20260324_003017_844a0ce5-ee3a-440c-975b-3be2b4e0c292.jpeg"
     alt="What is your boat worth in today's market?"
     class="absolute inset-0 w-full h-full object-cover"
     loading="eager"
@@ -195,21 +195,24 @@
     </div>
 
     <form id="val-form-el" class="space-y-5" onsubmit="return handleValuationForm(event)">
+      <input type="hidden" name="_subject" value="Valuation request">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
       <div class="grid sm:grid-cols-2 gap-5">
         <div>
           <label for="val-name" class="form-label">Name</label>
-          <input type="text" id="val-name" name="name" required class="form-input">
+          <input type="text" id="val-name" name="name" required autocomplete="name" class="form-input">
         </div>
         <div>
           <label for="val-email" class="form-label">Email</label>
-          <input type="email" id="val-email" name="email" required class="form-input">
+          <input type="email" id="val-email" name="email" required autocomplete="email" class="form-input">
         </div>
       </div>
 
       <div class="grid sm:grid-cols-2 gap-5">
         <div>
           <label for="val-phone" class="form-label">Phone</label>
-          <input type="tel" id="val-phone" name="phone" class="form-input">
+          <input type="tel" id="val-phone" name="phone" autocomplete="tel" class="form-input">
         </div>
         <div>
           <label for="val-make" class="form-label">Make and model</label>
@@ -285,13 +288,28 @@ function handleValuationForm(e) {
   e.preventDefault();
   var form = document.getElementById('val-form-el');
   var data = new FormData(form);
-  var params = [];
-  data.forEach(function(v, k) { if (v) params.push(k + ': ' + v); });
-  var subject = encodeURIComponent('Valuation request');
-  var body = encodeURIComponent(params.join('\n'));
-  window.location.href = 'mailto:info@sentyacht.com?subject=' + subject + '&body=' + body;
-  form.classList.add('hidden');
-  document.getElementById('form-success').classList.remove('hidden');
+  var obj = {};
+  data.forEach(function(v, k) { obj[k] = v; });
+  var btn = form.querySelector('button[type="submit"]');
+  if (btn) { btn.disabled = true; btn.style.opacity = '0.6'; }
+  fetch('https://formsubmit.co/ajax/info@sentyacht.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(obj)
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(res) {
+    if (res.success === 'true' || res.success === true) {
+      form.classList.add('hidden');
+      document.getElementById('form-success').classList.remove('hidden');
+    } else {
+      throw new Error(res.message || 'error');
+    }
+  })
+  .catch(function() {
+    if (btn) { btn.disabled = false; btn.style.opacity = ''; }
+    alert('Could not send. Please try again.');
+  });
   return false;
 }
 </script>

@@ -149,7 +149,7 @@ h1, h2, h3, h4 {
 .mobile-menu {
   position: fixed;
   inset: 0;
-  z-index: 90;
+  z-index: 40;
   background: var(--color-surface);
   display: flex;
   flex-direction: column;
@@ -190,6 +190,11 @@ h1, h2, h3, h4 {
 }
 .hamburger-active .hamburger-line:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
+}
+/* Menu open → force hamburger dark regardless of nav state (menu overlay is light) */
+.nav-transparent .hamburger-active .hamburger-line,
+.nav-solid .hamburger-active .hamburger-line {
+  background: var(--color-text);
 }
 
 /* ─── Buttons ─── */
@@ -773,8 +778,8 @@ textarea.form-input {
   .gallery-arrow-right { right: 8px; }
 
   .gallery-thumb {
-    width: 56px;
-    height: 42px;
+    width: 64px;
+    height: 48px;
   }
 }
 
@@ -1035,4 +1040,75 @@ textarea.form-input {
   body { background: #fff; color: #000; }
   .boat-card { break-inside: avoid; box-shadow: none; border: 1px solid #ddd; }
   a { color: #000; text-decoration: underline; }
+}
+
+/* ═══════════════════════════════════════════
+   Mobile improvements (applied via global CSS
+   to avoid per-page HTML edits)
+   ═══════════════════════════════════════════ */
+
+/* Hamburger button: bump to 44×44 for WCAG/Apple touch target */
+#mobile-menu-btn {
+  width: 44px !important;
+  height: 44px !important;
+  padding: 6px;
+}
+
+/* Mobile menu links: generous tap area */
+.mobile-menu a {
+  padding: 12px 24px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* Anchor scroll: account for fixed nav */
+section[id], h2[id], h3[id] {
+  scroll-margin-top: 80px;
+}
+
+@media (max-width: 767px) {
+  /* iOS zoom fix: bump form controls to 16px so Safari doesn't auto-zoom on tap */
+  .form-input,
+  .filter-select,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="search"],
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  /* Minimum 44px tap height for form controls */
+  .form-input,
+  .filter-select,
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select {
+    min-height: 44px;
+  }
+
+  /* Cookie banner: shrink to avoid covering CTAs */
+  .cookie-banner {
+    padding: 10px 14px;
+  }
+  .cookie-banner p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+  .cookie-banner .btn-primary {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  /* Footer links: wider tap area */
+  footer a {
+    display: inline-block;
+    padding: 4px 0;
+    min-height: 32px;
+  }
 }

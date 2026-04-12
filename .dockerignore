@@ -6,32 +6,34 @@ node_modules/
 .playwright-mcp/
 claudedocs/
 temporary screenshots/
+memory/
 
-# Dev-only scripts
-screenshot.mjs
+# Dev-only scripts (not needed in image)
 serve.mjs
-generate-detail-pages.mjs
+build.mjs
+scripts/
 
-# Build output (regenerated in Docker build stage)
+# Build output (Tailwind CSS regenerated in Docker build stage)
 dist/
-
-# Legacy files (unused by V1)
-architecture-diagram.html
-boats.json
-shared.js
-styles.css
 
 # Documentation (not needed in image)
 CLAUDE.md
 README.md
+DEPLOYMENT.md
 
-# Keep for build stage:
-# build.mjs — runs in stage 1
-# boats.js — data source for build
-# src/ — templates, partials, content, styles
-# package.json — needed for npm install + Node ESM resolution
-# tailwind.config.js — Tailwind CSS configuration
-# index.html — root redirect
-# 404.html — error page
-# assets/ — images
-# nginx.conf — server config
+# Agent artifacts (in case any escape .gitignore)
+/home-*.png
+/about-*.png
+/contact-*.png
+/sell-*.png
+/sold-*.png
+/legal-*.png
+/cookie-*.png
+/valuation-*.png
+/*.snapshot.md
+
+# What IS copied in stage 1 (Tailwind build):
+#   package.json, tailwind.config.js, src/, es/, en/
+# What IS copied in stage 2 (nginx serve):
+#   index.html, 404.html, 404-en.html, sitemap.xml, robots.txt, boats.js
+#   es/, en/, assets/, nginx.conf, src/styles/main.css

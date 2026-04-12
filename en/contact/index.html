@@ -165,22 +165,22 @@
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
                 <label for="ct-name" class="form-label">Name</label>
-                <input type="text" id="ct-name" name="name" required class="form-input">
+                <input type="text" id="ct-name" name="name" required autocomplete="name" class="form-input">
               </div>
               <div>
                 <label for="ct-email" class="form-label">Email</label>
-                <input type="email" id="ct-email" name="email" required class="form-input">
+                <input type="email" id="ct-email" name="email" required autocomplete="email" class="form-input">
               </div>
             </div>
 
             <div class="grid sm:grid-cols-2 gap-5">
               <div>
                 <label for="ct-phone" class="form-label">Phone</label>
-                <input type="tel" id="ct-phone" name="phone" class="form-input">
+                <input type="tel" id="ct-phone" name="phone" autocomplete="tel" class="form-input">
               </div>
               <div>
                 <label for="ct-subject" class="form-label">Subject</label>
-                <select id="ct-subject" name="subject" class="filter-select" style="padding: 0.625rem 0.875rem;">
+                <select id="ct-subject" name="_subject" class="filter-select" style="padding: 0.625rem 0.875rem;">
                   <option value="General enquiry">General enquiry</option>
                   <option value="Interest in a boat">Interest in a boat</option>
                   <option value="I want to sell my boat">I want to sell my boat</option>
@@ -195,6 +195,8 @@
               <textarea id="ct-message" name="message" rows="5" required class="form-input" placeholder="Tell us how we can help..."></textarea>
             </div>
 
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
             <button type="submit" class="btn-primary w-full justify-center">
               Send enquiry
               <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
@@ -231,13 +233,28 @@ function handleContactForm(e) {
   e.preventDefault();
   var form = document.getElementById('contact-form');
   var data = new FormData(form);
-  var params = [];
-  data.forEach(function(v, k) { if (v) params.push(k + ': ' + v); });
-  var subject = encodeURIComponent(data.get('subject') || 'Website enquiry');
-  var body = encodeURIComponent(params.join('\n'));
-  window.location.href = 'mailto:info@sentyacht.com?subject=' + subject + '&body=' + body;
-  form.classList.add('hidden');
-  document.getElementById('contact-form-success').classList.remove('hidden');
+  var obj = {};
+  data.forEach(function(v, k) { obj[k] = v; });
+  var btn = form.querySelector('button[type="submit"]');
+  if (btn) { btn.disabled = true; btn.style.opacity = '0.6'; }
+  fetch('https://formsubmit.co/ajax/info@sentyacht.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(obj)
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(res) {
+    if (res.success === 'true' || res.success === true) {
+      form.classList.add('hidden');
+      document.getElementById('contact-form-success').classList.remove('hidden');
+    } else {
+      throw new Error(res.message || 'error');
+    }
+  })
+  .catch(function() {
+    if (btn) { btn.disabled = false; btn.style.opacity = ''; }
+    alert('Could not send. Please try again.');
+  });
   return false;
 }
 </script>

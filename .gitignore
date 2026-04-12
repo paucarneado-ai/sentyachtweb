@@ -13,3 +13,14 @@ review_screenshots/
 review_screenshots_*/
 sentyacht_cosasdebarcos_profile.png
 *.bak
+
+# Agent-generated audit artifacts at repo root
+/home-*.png
+/about-*.png
+/contact-*.png
+/sell-*.png
+/sold-*.png
+/legal-*.png
+/cookie-*.png
+/valuation-*.png
+/*.snapshot.md
