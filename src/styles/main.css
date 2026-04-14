@@ -123,6 +123,11 @@ h1, h2, h3, h4 {
 .nav-transparent .lang-switch:hover { color: #fff; border-color: rgba(255, 255, 255, 0.4); }
 .nav-transparent .hamburger-line { background: #fff; }
 
+/* Mobile menu open: force dark logo + dark hamburger over cream menu background,
+   regardless of nav-transparent vs nav-solid state */
+body:has(.mobile-menu.open) .nav-logo { filter: none !important; }
+body:has(.mobile-menu.open) .nav-transparent .hamburger-line { background: var(--color-text); }
+
 /* Scrolled: dark text */
 .nav-solid .nav-link { color: var(--color-text-secondary); }
 .nav-solid .nav-link:hover { color: var(--color-text); }
