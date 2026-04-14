@@ -5,50 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Página no encontrada — SentYacht</title>
   <meta name="robots" content="noindex">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: #FAF8F4;
-      color: #1C1C1E;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-      text-align: center;
-    }
-    h1 {
-      font-family: 'Cormorant Garamond', Georgia, serif;
-      font-size: 2.5rem;
-      font-weight: 400;
-      letter-spacing: -0.02em;
-      margin-bottom: 1rem;
-    }
-    p { color: #6B6B6E; margin-bottom: 2rem; line-height: 1.7; }
-    a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.75rem 1.75rem;
-      background: #0077CC;
-      color: #fff;
-      font-size: 0.875rem;
-      font-weight: 500;
-      text-decoration: none;
-      border-radius: 2px;
-      transition: background 0.25s;
-    }
-    a:hover { background: #005FA3; }
-  </style>
+  <link rel="stylesheet" href="/dist/styles/tailwind.css">
+  <link rel="stylesheet" href="/src/styles/main.css">
 </head>
-<body>
-  <h1>Página no encontrada</h1>
-  <p>La página que busca no existe o ha sido movida.</p>
-  <a href="/es/">Volver al inicio</a>
+<body class="bg-base text-text antialiased">
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Header / Navigation -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 nav-solid" style="transition: background 0.4s, border-color 0.4s, box-shadow 0.4s;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16 lg:h-20">
+    <a href="/es/" class="relative z-50">
+      <img src="/assets/logo.png" alt="SentYacht" class="h-6 lg:h-7 nav-logo" style="transition: filter 0.4s;">
+    </a>
+
+    <div class="hidden lg:flex items-center gap-8">
+      <a href="/es/yates-en-venta/" class="nav-link text-sm font-medium tracking-wide" style="transition: color 0.3s;">Embarcaciones</a>
+      <a href="/es/vender-su-barco/" class="nav-link text-sm font-medium tracking-wide" style="transition: color 0.3s;">Vender</a>
+      <a href="/es/sobre-sentyacht/" class="nav-link text-sm font-medium tracking-wide" style="transition: color 0.3s;">Nosotros</a>
+      <a href="/es/contacto/" class="nav-link text-sm font-medium tracking-wide" style="transition: color 0.3s;">Contacto</a>
+      <a href="/en/" class="lang-switch text-xs font-medium tracking-widest border rounded-sm px-2 py-1" style="transition: color 0.3s, border-color 0.3s;">EN</a>
+    </div>
+
+    <button id="mobile-menu-btn" class="lg:hidden relative z-50 flex flex-col justify-center gap-[5px] w-8 h-8" aria-label="Menu" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu">
+  <a href="/es/yates-en-venta/">Embarcaciones</a>
+  <a href="/es/vender-su-barco/">Vender</a>
+  <a href="/es/sobre-sentyacht/">Nosotros</a>
+  <a href="/es/contacto/">Contacto</a>
+  <a href="/en/" class="text-lg text-text-muted">EN</a>
+</div>
+
+  <main id="main-content">
+    <section class="min-h-[70vh] flex items-center justify-center px-6 pt-32 pb-24">
+      <div class="max-w-xl text-center">
+        <p class="text-xs tracking-[0.2em] uppercase text-text-muted mb-6">Error 404</p>
+        <h1 class="font-serif text-4xl sm:text-5xl text-text leading-tight mb-6">Página no encontrada</h1>
+        <p class="text-text-secondary leading-relaxed mb-10">La página que busca no existe o ha sido movida. Puede volver al inicio o explorar las embarcaciones disponibles.</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="/es/" class="btn-primary text-sm py-3 px-7">Volver al inicio</a>
+          <a href="/es/yates-en-venta/" class="btn-secondary text-sm py-3 px-7">Ver embarcaciones</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+<footer class="border-t border-border" style="background-color: #EDEAE3;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 items-start">
+      <div>
+        <a href="/es/" class="inline-block mb-4">
+          <img src="/assets/logo.png" alt="SentYacht" class="h-7">
+        </a>
+        <p class="text-text-muted text-sm leading-relaxed">Compraventa de embarcaciones desde El Masnou.</p>
+      </div>
+
+      <div>
+        <h4 class="text-xs tracking-[0.2em] uppercase text-text-muted mb-5">Navegación</h4>
+        <div class="flex flex-col gap-3">
+          <a href="/es/" class="text-text-secondary text-sm hover:text-accent" style="transition: color 0.3s;">Inicio</a>
+          <a href="/es/yates-en-venta/" class="text-text-secondary text-sm hover:text-accent" style="transition: color 0.3s;">Embarcaciones</a>
+          <a href="/es/vender-su-barco/" class="text-text-secondary text-sm hover:text-accent" style="transition: color 0.3s;">Vender</a>
+          <a href="/es/sobre-sentyacht/" class="text-text-secondary text-sm hover:text-accent" style="transition: color 0.3s;">Nosotros</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-xs tracking-[0.2em] uppercase text-text-muted mb-5">Contacto</h4>
+        <div class="flex flex-col gap-3 text-sm">
+          <p class="text-text-secondary">Port Esportiu, Local 49</p>
+          <p class="text-text-secondary">El Masnou, 08320, Barcelona</p>
+          <a href="tel:+34609865215" class="text-text-secondary hover:text-accent" style="transition: color 0.3s;">+34 609 865 215</a>
+          <a href="mailto:info@sentyacht.com" class="text-text-secondary hover:text-accent" style="transition: color 0.3s;">info@sentyacht.com</a>
+          <a href="https://wa.me/34609865215" class="text-text-secondary hover:text-accent" style="transition: color 0.3s;" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-xs tracking-[0.2em] uppercase text-text-muted mb-5">Legal</h4>
+        <div class="flex flex-col gap-3 text-sm">
+          <a href="/es/aviso-legal/" class="text-text-secondary hover:text-accent" style="transition: color 0.3s;">Aviso Legal</a>
+          <a href="/es/politica-de-privacidad/" class="text-text-secondary hover:text-accent" style="transition: color 0.3s;">Política de Privacidad</a>
+          <a href="/es/politica-de-cookies/" class="text-text-secondary hover:text-accent" style="transition: color 0.3s;">Política de Cookies</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-text-muted text-xs">&copy; 2026 SentYacht. Todos los derechos reservados.</p>
+      <p class="text-text-muted text-xs">Puerto Deportivo El Masnou, Barcelona</p>
+    </div>
+  </div>
+</footer>
+
+  <script>
+    (function() {
+      const btn = document.getElementById('mobile-menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', () => {
+        const isOpen = menu.classList.contains('open');
+        menu.classList.toggle('open');
+        btn.classList.toggle('hamburger-active');
+        document.body.style.overflow = isOpen ? '' : 'hidden';
+        btn.setAttribute('aria-expanded', !isOpen);
+      });
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('open');
+          btn.classList.remove('hamburger-active');
+          document.body.style.overflow = '';
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
